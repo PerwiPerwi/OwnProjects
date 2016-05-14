@@ -23,7 +23,7 @@ public class AddData {
 	private final String PATTERNFULLNAME = "^([a-zA-Z].*)$";
 	private Pattern patternForFullName = Pattern.compile(PATTERNFULLNAME);
 
-	// Metoda dodawania imienia lub naziwska sprawdzaj¹ca wyra¿enie regularne
+// Metoda wprowadzenia imienia lub naziwska sprawdzaj¹ca wyra¿enie regularne
 	public String addNameOrSurname(String textForName) {
 		while (true) {
 			System.out.print(textForName);
@@ -38,7 +38,7 @@ public class AddData {
 			}
 		}
 	}
-	
+//Metoda wprowadzenia imienia i nazwiska	
 	public String addFullName(String textForName) {
 		while (true) {
 			System.out.println(textForName);
@@ -53,13 +53,13 @@ public class AddData {
 			}
 		}
 	}
-
+//Metoda sprawdzajaca wyrazenie regularne
 	public boolean checkRegex(String value, Pattern pattern) {
 		Matcher matcher = pattern.matcher(value);
 		boolean verified = matcher.find() ? true : false;
 		return verified;
 	}
-
+//Metoda do wprowadzania ocen
 	public double setValue(String textForMarks) {
 		double result = 0;
 		while (true) {

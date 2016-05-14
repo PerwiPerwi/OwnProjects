@@ -6,37 +6,34 @@ import java.util.Scanner;
 public class DisplayOptions {
 
 	private Scanner sc = new Scanner(System.in);
+
+//Deklaracja instancji klas	
 	OperationOnStudent operationOnStudent = new OperationOnStudent();
-	// AvgLists avgLists = new AvgLists();
 	AvgLists avgLists = AvgLists.getInstance();
 
+// G³ówna pêtla programu gdzie wybierane s¹ poszczególne funkcjonalnoœci
+// programu	
 	public void mainMenu() {
 		int option = 0;
-		// G³ówna pêtla programu gdzie wybierane s¹ poszczególne funkcjonalnoœci
-		// programu
 		while (option != 3) {
 			try {
 				// Wyœwietlenie dostêpnych opcji programu
 				displayOptions();
 				option = sc.nextInt();
 				switch (option) {
-				// Dodanie nowego studenta
 				case 0:
 					addStudent();
 					break;
 				case 1:
-					// Usuniêcie studenta
 					removeStudent();
 					break;
 				// Wyœwietlenie wprowadzonych studentów
 				case 2:
 					displayStudents();
 					break;
-				// Zamkniêcie programu
 				case 3:
 					System.out.println("Zosta³a wybrana opcja zamkniêcia programu");
 					System.exit(0);
-
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("B³êdny wybór!");
@@ -64,7 +61,7 @@ public class DisplayOptions {
 
 	}
 
-	// Metoda dodania nowego studenta
+// Metoda dodania nowego studenta
 	private void addStudent() {
 		boolean endWhileLoop = true;
 		int option;
