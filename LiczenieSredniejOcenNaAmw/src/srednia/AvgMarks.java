@@ -1,7 +1,7 @@
 package srednia;
-
+//Modul zawierajacy skladowe elementy studenta
 public class AvgMarks {
-
+// Pola klasy imie, nazwisko oraz oceny
 	private String name;
 	private String surname;
 	private double firstMark;
@@ -9,9 +9,13 @@ public class AvgMarks {
 	private double thirdMark;
 	private double fourMark;
 
+	//pusty konstruktor
+	public AvgMarks(){
+		
+	}
 	/*
-	 * Deklaracja Setterow oraz Getterow do wprowadzania imienia, nazwiska oraz
-	 * poszczegolnych ocen
+	 * Settery, gettery
+	 * 
 	 */
 
 	public String getName() {

@@ -3,7 +3,7 @@ package srednia;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
-
+//Modul wykonujacy operacje na studentach (dodawanie, usuwanie, wyswietlanie, liczenie sredniej)
 public class OperationOnStudent {
 
 	// Deklaracja komunikatów które bêd¹ wyœwietlane u¿ytkownikowi podczas
@@ -27,16 +27,15 @@ public class OperationOnStudent {
 			"Ocena Ryzyska i Prognozowanie w Bezpieczeñstwie",
 			"System Zarz¹dzania Kryzysowego w Administracji Publicznej: " };
 
-//Mapa do ktorej beda przypisywane przedmioty i oceny
+	// Mapa do ktorej beda przypisywane przedmioty i oceny
 	private Map<String, Double> innerMap;
 
-//Deklaracja instancji klas
+	// Deklaracja instancji klas
 	private AvgMarks avgMarks = new AvgMarks();
-	private AddData addData = new AddData();	
+	private AddData addData = new AddData();
 	private AvgLists avgLists = AvgLists.getInstance();
-	
 
-// Wyswietlanie wszystkich studentow (kluczy HashMapy)
+	// Wyswietlanie wszystkich studentow (kluczy HashMapy)
 	public void displayStudentsforAvg(Map<String, Map<String, Double>> subjectMap, String studySubject) {
 		if (subjectMap.isEmpty()) {
 			System.out.println("Nie dodano jeszcze ¿adnego studenta");
@@ -51,8 +50,8 @@ public class OperationOnStudent {
 		}
 	}
 
-// Metoda wyswietlajaca studentow z mozliwoscia ich usuniecia
-	public void displayStudentsForRemove(Map<String, Map<String, Double>> subjectMap, String studySubject ) {
+	// Metoda wyswietlajaca studentow z mozliwoscia ich usuniecia
+	public void displayStudentsForRemove(Map<String, Map<String, Double>> subjectMap, String studySubject) {
 		if (subjectMap.isEmpty()) {
 			System.out.println("Nie dodano jeszcze ¿adnego studenta");
 			System.out.println("-----------------------------------------");
@@ -66,26 +65,27 @@ public class OperationOnStudent {
 		}
 	}
 
-// Metoda dodania nowego studenta	
+	// Metoda dodania nowego studenta
 	public void addStudent(String studySubject) {
 
-//Tworzenie nowej "wewnetrznej" HashMapy do przechowywania przedmiotow i ocen
+		// Tworzenie nowej "wewnetrznej" HashMapy do przechowywania przedmiotow
+		// i ocen
 		innerMap = new HashMap<String, Double>();
 		if (studySubject.equals("BW")) {
 			System.out.println("-----------------------------------------------------");
 			System.out.println("Zosta³ wybrany kierunek Bezpieczenstwo Wewnetrzne");
 
-//Przypisanie wartosci (imienia, nazwiska, ocen)
+			// Przypisanie wartosci (imienia, nazwiska, ocen)
 			avgMarks.setName(addData.addNameOrSurname("Wprowadz imiê: "));
 			avgMarks.setSurname(addData.addNameOrSurname("Wprowadz nazwisko: "));
 			avgMarks.setFirstMark(addData.setValue(BWSUBJECTSFIELDS[0]));
 			avgMarks.setSecondMark(addData.setValue(BWSUBJECTSFIELDS[1]));
 			avgMarks.setThirdMark(addData.setValue(BWSUBJECTSFIELDS[2]));
 
-//Tworzenie klucza do glownej HashMapy (imie i nazwisko studenta)
+			// Tworzenie klucza do glownej HashMapy (imie i nazwisko studenta)
 			String studentKey = avgMarks.getName() + " " + avgMarks.getSurname();
 
-//Dodanie przedmiotow i ocen do konkretnego studenta
+			// Dodanie przedmiotow i ocen do konkretnego studenta
 			innerMap.put(BWSUBJECTSKEYS[0], avgMarks.getFirstMark());
 			avgLists.bwStudents.put(studentKey, innerMap);
 
@@ -99,7 +99,8 @@ public class OperationOnStudent {
 			System.out.println("Student kierunku Bezpieczenstwo Wewnetrzne " + studentKey + " zosta³ dodany.");
 
 		} else {
-//Analogicznie jak w przypadku powyzszego kodu, z roznica, ze studenci beda innego kierunku
+			// Analogicznie jak w przypadku powyzszego kodu, z roznica, ze
+			// studenci beda innego kierunku
 			System.out.println("-----------------------------------------------------");
 			System.out.println("Zosta³ wybrany kierunek Systemy Informacyjne w Bezpieczeñstwie");
 
@@ -111,7 +112,7 @@ public class OperationOnStudent {
 			avgMarks.setFourMark(addData.setValue(MSISUBJECTSFIELDS[3]));
 
 			String studentKey = avgMarks.getName() + " " + avgMarks.getSurname();
-			
+
 			innerMap.put(MSISUBJECTSKEYS[0], avgMarks.getFirstMark());
 			avgLists.msiStudents.put(studentKey, innerMap);
 
@@ -129,10 +130,10 @@ public class OperationOnStudent {
 		}
 	}
 
-//Metoda do usuwania studenta
+	// Metoda do usuwania studenta
 	private void removeStudent(String studySubject) {
 		if (studySubject.equals("BW")) {
-			while (true) {				
+			while (true) {
 				String studentToRemove = addData
 						.addFullName("Wprowadz imiê i nazwisko studenta którego chesz usun¹æ: ");
 
@@ -171,7 +172,6 @@ public class OperationOnStudent {
 		if (studySubject.equals("BW")) {
 			String studentName = addData.addFullName("Wprowadz imiê i nazwisko studenta, którego chcesz wyœwietliæ.");
 			for (String innerMapKey : innerMap.keySet()) {
-				System.out.println("AVG");
 				avg += avgLists.bwStudents.get(studentName).get(innerMapKey);
 				counter++;
 			}

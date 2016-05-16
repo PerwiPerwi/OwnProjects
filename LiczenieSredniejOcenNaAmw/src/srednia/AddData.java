@@ -4,14 +4,12 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+// Modu³ odpowiadajacy za wprowadzanie danych
 public class AddData {
 	Scanner sc = new Scanner(System.in);
-	/*
-	 * Pattern do sprawdzania poprawnoœci wprowadzonej oceny zakres od 2 do 5 z
-	 * mo¿liwoœci¹ wprowadzania ocen po³owicznych np 3.5, 4.5
-	 */
-
+	
+	
+	//Patterny do wyrazen regularnych
 	private final String PATTERNFORMARKS = "^([25])$|^([34])?([/.])?(0|5)?$";
 	private Pattern patternForNumbersCompiled = Pattern.compile(PATTERNFORMARKS);
 
@@ -23,7 +21,7 @@ public class AddData {
 	private final String PATTERNFULLNAME = "^([a-zA-Z].*)$";
 	private Pattern patternForFullName = Pattern.compile(PATTERNFULLNAME);
 
-// Metoda wprowadzenia imienia lub naziwska sprawdzaj¹ca wyra¿enie regularne
+// Metoda wprowadzenia imienia lub naziwska
 	public String addNameOrSurname(String textForName) {
 		while (true) {
 			System.out.print(textForName);

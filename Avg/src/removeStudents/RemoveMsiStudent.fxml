@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="455.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="removeStudents.RemoveMsiStudent">
+   <left>
+      <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+         <center>
+            <GridPane prefHeight="439.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="271.0" minWidth="10.0" prefWidth="148.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.0" minWidth="10.0" prefWidth="153.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="41.0" valignment="TOP" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="46.0" valignment="TOP" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="162.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="70.0" prefWidth="306.0" text="Usuwanie studenta MSI" textAlignment="CENTER" wrapText="true" GridPane.columnSpan="2147483647">
+                     <font>
+                        <Font name="Aharoni Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" prefHeight="80.0" prefWidth="120.0" text="Wyjście" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="25.0" />
+                     </GridPane.margin></Button>
+                  <Label alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="21.0" prefWidth="291.0" text="Dodani studenci:" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <GridPane fx:id="students" GridPane.rowIndex="3">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <GridPane fx:id="avg" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+                  <Label fx:id="empty" prefHeight="47.0" prefWidth="301.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+                  <GridPane prefHeight="43.0" prefWidth="262.0" GridPane.rowIndex="2">
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#backToMenu" prefHeight="80.0" prefWidth="120.0" text="Główne Menu" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="25.0" />
+                     </GridPane.margin></Button>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </left>
+</BorderPane>

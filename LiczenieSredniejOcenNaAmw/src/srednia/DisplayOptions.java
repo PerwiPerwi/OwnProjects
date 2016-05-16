@@ -2,7 +2,7 @@ package srednia;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+// Modul do wyswietlania opcji i nawigowanie po nich
 public class DisplayOptions {
 
 	private Scanner sc = new Scanner(System.in);
@@ -48,7 +48,7 @@ public class DisplayOptions {
 			}
 		}
 	}
-
+// Glowne opcje programu
 	public void displayOptions() {
 		System.out.println("Witam w programie do Liczenia œredniej na AMW w Gdyni!");
 		System.out.println("Proszê wybraæ poœród dostêpnych poni¿ej opcji: ");
