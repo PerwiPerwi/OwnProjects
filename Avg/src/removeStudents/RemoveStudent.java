@@ -61,7 +61,6 @@ public class RemoveStudent {
 					try {
 						showDialogInfo(fxml);
 					} catch (Exception e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				});
