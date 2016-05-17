@@ -20,26 +20,6 @@
 
 
 	<servlet>
-		<servlet-name>UpdateUserFormServlet</servlet-name>
-		<servlet-class>user.UpdateUserFormServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UpdateUserFormServlet</servlet-name>
-		<url-pattern>/updateuser.html</url-pattern>
-	</servlet-mapping>
-
-
-	<servlet>
-		<servlet-name>UpdateUserServlet</servlet-name>
-		<servlet-class>user.UpdateUserServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UpdateUserServlet</servlet-name>
-		<url-pattern>
-			/updateUser.do</url-pattern>
-	</servlet-mapping>
-
-	<servlet>
 		<servlet-name>AddUserServlet</servlet-name>
 		<servlet-class>user.AddUserServlet</servlet-class>
 	</servlet>
@@ -56,6 +36,29 @@
 		<servlet-name>AddUserFormServlet</servlet-name>
 		<url-pattern>/adduser.html</url-pattern>
 	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>UpdateUserServlet</servlet-name>
+		<servlet-class>user.UpdateUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateUserServlet</servlet-name>
+		<url-pattern>/updateUser.do</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>UpdateUserFormServlet</servlet-name>
+		<servlet-class>user.UpdateUserFormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateUserFormServlet</servlet-name>
+		<url-pattern>/update.html</url-pattern>
+	</servlet-mapping>
+
+
 
 	<servlet>
 		<servlet-name>RemoveUserServlet</servlet-name>

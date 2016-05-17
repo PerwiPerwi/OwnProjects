@@ -11,12 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 public class UpdateUserServlet extends HttpServlet {
-	
+
 	private static final Logger log = Logger.getLogger(AddUserServlet.class);
-	
+
 	UserDAO userDao = new UserDAO();
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String errorMsg = "";
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
@@ -27,16 +28,16 @@ public class UpdateUserServlet extends HttpServlet {
 		}
 
 		if (!errorMsg.isEmpty()) {
-	//		log.error(errorMsg);
+			// log.error(errorMsg);
 			request.setAttribute("_ERROR", errorMsg);
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/update.html");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/update.html");
 			requestDispatcher.forward(request, response);
 			return;
 		}
 
-		boolean result = userDao.updateUser(name, email, userId);
+		boolean result = userDao.updateUser(userId, name, email);
 		if (!result) {
-			//log.error("Problem z usunieciem usera o id=" + id);
+			// log.error("Problem z usunieciem usera o id=" + id);
 			request.setAttribute("_ERROR", "Problem z aktualizacj¹ usera o id = " + userId);
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/error.jsp");
 			requestDispatcher.forward(request, response);
@@ -44,8 +45,7 @@ public class UpdateUserServlet extends HttpServlet {
 		}
 
 		request.setAttribute("_OK", "Zaaktualizowano usera o id = " + userId);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/users.html");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/users.html");
 		requestDispatcher.forward(request, response);
 	}
-	}
-	
+}

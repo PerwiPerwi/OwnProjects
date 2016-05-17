@@ -82,14 +82,14 @@ public class UserDAO {
 		return Optional.of(null);
 	}
 
-	public boolean updateUser(String name, String mail, int id) {
+	public boolean updateUser(int id, String name, String mail) {
 		String query = "UPDATE users set name=?, email=? where id =?";
 		try {
 			PreparedStatement preparedStatement = conn.prepareStatement(query);
+			preparedStatement.setInt(1, id);
+			preparedStatement.setString(2, name);
+			preparedStatement.setString(3, mail);
 			
-			preparedStatement.setString(1, name);
-			preparedStatement.setString(2, mail);
-			preparedStatement.setInt(3, id);
 			
 			preparedStatement.executeUpdate();
 			preparedStatement.close();

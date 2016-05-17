@@ -50,7 +50,7 @@ public class AddUserServlet extends HttpServlet {
 		}
 
 		request.setAttribute("_OK", "Dodano usera o name = " + name + "i mail = "+email);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/users.html");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/users.html");
 		requestDispatcher.forward(request, response);
 	}
 }

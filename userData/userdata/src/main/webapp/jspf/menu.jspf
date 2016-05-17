@@ -10,7 +10,7 @@
     <ul class="nav navbar-nav">
       <li><a href="users.html">Userzy</a></li>
       <li><a href="adduser.html">Dodawanie usera</a></li> 
-      <li><a href="updateuser.html">Update usera</a><li>
+      <li><a href="update.html">Update usera</a><li>
     </ul>
   </div>
 </nav>
