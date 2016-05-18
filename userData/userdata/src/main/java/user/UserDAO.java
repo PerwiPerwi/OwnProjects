@@ -19,45 +19,38 @@ public class UserDAO {
 		conn = DBUtil.getConnection();
 	}
 
-	//private static final Map<Integer, User> users = new HashMap<>();
-	/*
-	 * static { users.put(1, new User(1, "Rafos")); users.put(3, new User(3,
-	 * "Admin")); }
-	 */
-
 	public boolean addUser(String name, String mail) {
 		try {
 			String query = "insert into users (name, email, registrationDate) values (?,?, NOW() )";
 			PreparedStatement preparedStatement = conn.prepareStatement(query);
-			
+
 			preparedStatement.setString(1, name);
 			preparedStatement.setString(2, mail);
 
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 			return true;
-			
+
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return false;
 		}
 
 	}
-	
-	public boolean deleteUser (int id){
-		try{
+
+	public boolean deleteUser(int id) {
+		try {
 			String query = "delete from users where id=?";
 			PreparedStatement preparedStatement = conn.prepareStatement(query);
 			preparedStatement.setInt(1, id);
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 			return true;
-		} catch (SQLException e){
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return false;
 	}
-	
 
 	public Optional<User> getUserById(int id) {
 		// return Optional.ofNullable(users.get(id));
@@ -67,7 +60,7 @@ public class UserDAO {
 			PreparedStatement preparedStatement = conn.prepareStatement(query);
 			preparedStatement.setInt(1, id);
 			ResultSet resultSet = preparedStatement.executeQuery();
-			if(resultSet.next()) {
+			if (resultSet.next()) {
 				user.setId(resultSet.getInt("id"));
 				user.setName(resultSet.getString("name"));
 				user.setEmail(resultSet.getString("email"));
@@ -86,11 +79,10 @@ public class UserDAO {
 		String query = "UPDATE users set name=?, email=? where id =?";
 		try {
 			PreparedStatement preparedStatement = conn.prepareStatement(query);
-			preparedStatement.setInt(1, id);
-			preparedStatement.setString(2, name);
-			preparedStatement.setString(3, mail);
-			
-			
+			preparedStatement.setInt(3, id);
+			preparedStatement.setString(1, name);
+			preparedStatement.setString(2, mail);
+
 			preparedStatement.executeUpdate();
 			preparedStatement.close();
 			return true;
@@ -125,28 +117,4 @@ public class UserDAO {
 		}
 		return users;
 	}
-	
-
-	/*
-	 * public Set<User> getAll() { return new HashSet<>(users.values()); }
-	 */
-
-/*	public Set<User> getAll() {
-
-		return new HashSet<>(users.values());
-	}
-*/
-	/*
-	 * public boolean addUser(int id, String name) { if (users.containsKey(id))
-	 * { // log.error("User o id=? już istnieje!", id); return false; }
-	 * users.put(id, new User(id, name)); return true; }
-	 */
-/*	public boolean removeUser(int id) {
-		if (!users.containsKey(id)) {
-			// log.error("User o id=" + id + " nie istnieje!");
-			return false;
-		}
-		users.remove(id);
-		return true;
-	}*/
 }

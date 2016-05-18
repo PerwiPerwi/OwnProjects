@@ -24,11 +24,11 @@
     Dodani userzy
   </a>
 <c:forEach items="${users}" var="user">
- <a href="user.html?id=${user.getId()}" class="list-group-item" ><c:out value="${user}"></c:out></a>
+ <%-- <a href="user.html?id=${user.getId()}" class="list-group-item" ><c:out value="${user}"></c:out></a> --%>
    
- 	<%-- <c:out value="${user}"></c:out>
+ 	 <c:out value="${user}"></c:out>
     <a href="user.html?id=${user.getId()}" class="list-group-item" ><c:out value="Usuń"></c:out></a>
-    <a href="update.html?id=${user.getId()}" class="list-group-item" ><c:out value="Aktualizuj"></c:out></a> --%>
+    <a href="update.html?id=${user.getId()}" class="list-group-item" ><c:out value="Aktualizuj"></c:out></a>
     
     
 </c:forEach>
