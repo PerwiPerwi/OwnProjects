@@ -17,7 +17,7 @@ public class AddUserServlet extends HttpServlet {
 	private static final Logger log = Logger.getLogger(AddUserServlet.class);
 
 	private UserDAO userDAO = new UserDAO();
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String errorMsg = "";

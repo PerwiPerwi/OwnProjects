@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="application.SampleController">
+   <top>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="105.0" minWidth="0.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="188.0" GridPane.columnSpan="2147483647">
+              <menus>
+                <Menu fx:id="menu" mnemonicParsing="false" text="Działania">
+                  <items>
+                    <MenuItem fx:id="addItem" mnemonicParsing="false" onAction="#add" text="Dodawanie" />
+                        <MenuItem fx:id="minusItem" mnemonicParsing="false" onAction="#minus" text="Odejmowanie" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextField fx:id="firstField" promptText="Wpisz pierwszą" GridPane.rowIndex="1" />
+            <TextField fx:id="secondField" promptText="Wpisz drugą" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="thirdResult" promptText="Wynik" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>

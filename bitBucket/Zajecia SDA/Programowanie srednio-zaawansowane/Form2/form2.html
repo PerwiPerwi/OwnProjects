@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+ 
+<html>
+    <head>
+        <title>Exercice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <fieldset class="form-group has-error">
+                    <label for="name">Imię</label>
+                    <input type="text" class="form-control" id="name" placeholder="Podaj imię">
+                </fieldset>
+                <fieldset class="form-group has-error">
+                    <label for="surname">Nazwisko</label>
+                    <input type="text" class="form-control" id="surname" placeholder="Podaj nazwisko">
+                </fieldset>
+                <fieldset class="form-group has-error">
+                    <label for="age">Wiek</label>
+                    <input type="text" class="form-control" id="age" placeholder="Podaj wiek">
+                </fieldset>
+                <fieldset class="form-group has-error">
+                    <label for="pesel">Pesel</label>
+                    <input type="text" class="form-control" id="pesel" placeholder="Podaj PESEL">
+                </fieldset>
+                <button type="submit" class="btn btn-primary" disabled>Submit</button>
+            </form>
+ 
+ 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Imię</th>
+                        <th>Nazwisko</th>
+                        <th>Wiek</th>
+                        <th>Pesel</th>
+                        <th>usuń</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jan</td><td>Kowalski</td><td>35</td><td>91011206718</td><td><button>usuń</button></td>
+                    </tr>
+                    <tr>
+                        <td>Marcin</td><td>Adamiak</td><td>20</td><td>66011710015</td><td><button>usuń</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+ 
+        <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="js.js" type="text/javascript"></script>
+    </body>
+ 
+ 
+</html>

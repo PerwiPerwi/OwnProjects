@@ -1,0 +1,29 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-02-23, 17:50:00
+    Author     : RENT
+*/
+.kontenter{
+    width: 600px;
+    margin: 0 auto;
+}
+.tekst{
+    width: 150px;
+    display: block;
+    float:left;
+    padding-right: 5px;
+    text-align: right;
+}
+.kontenter>div{
+    
+    margin-bottom:10px;
+}
+#zdjecie{
+    width: 300px;
+    height: 300px;
+
+}

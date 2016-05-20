@@ -1,0 +1,278 @@
+@charset 'UTF-8';
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@include foundation-global-styles;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+$primary-color: #0b0b0b;
+$bg-color: #f5f5f5;
+$footer-color:#474747;
+.logo {
+    line-height: 96px;
+    color: $primary-color;
+    text-transform: uppercase;
+    display: block;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: $bg-color;
+    color: $primary-color;
+}
+
+nav {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    ul {
+        margin: 0;
+    }
+    li {
+        float: left;
+        display: inline-block;
+        list-style-type: none;
+        margin-right: 54px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        line-height: 96px;
+        color: $primary-color;
+    }
+}
+
+.services-section {
+    @include grid-row();
+    margin-bottom: 96px;
+    .services-subsection {
+        @include grid-column(12);
+        text-align: center;
+        @media(min-width: 640px) {
+            @include grid-column(4);
+            text-align: left;
+        }
+    }
+}
+
+.page-banner {
+    height: 504px;
+    background-image: url(../img/slider_sample.jpg);
+    background-position: center;
+    background-size: cover;
+    line-height: 96px;
+    text-align: center;
+    margin-bottom: 96px;
+    align-items: center;
+    justify-content: center;
+    p {
+        margin-bottom: 55px;
+        padding: 0 126px;
+        background-color: rgba(#0a0a0a, 0.9);
+        font-size: 48px;
+        color: #fff;
+        font-weight: 300;
+        line-height: 96px;
+    }
+    strong {
+        font-weight: 400;
+    }
+    .btn {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 60px;
+        padding: 0 51px;
+        text-transform: uppercase;
+        background-color: #fff;
+        color: $primary-color;
+        transition: all 0.35s ease-in-out;
+        font-weight: 900;
+        &:hover {
+            background-color: $primary-color;
+            color: #fff;
+        }
+    }
+}
+
+h2 {
+    border-bottom: 3px solid $primary-color;
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 8px;
+    margin-bottom: 22px;
+    margin-left: 0.9375rem;
+    margin-right: 0.9375rem;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 26px;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 12x;
+    line-height: 24px;
+}
+
+h6 {
+    font-size: 8px;
+}
+
+.project-section {
+    @include flex-grid-row();
+}
+
+.project-description {
+    
+    @include flex-grid-column(12);
+    text-align: center;
+    
+    @media (min-width: 500px){
+        @include flex-grid-column(4);   
+        text-align: left;
+        
+    }
+    
+    margin-bottom: 96px;
+}
+
+h3 {
+    margin-top: 14px;
+    margin-bottom: -25px;
+}
+
+span{
+    font-size: 8px;
+    display: block;
+    margin-bottom: 22px;
+}
+
+.projectImg{
+    @include flex-grid-column(12);
+    
+    @media(min-width:500px){
+        @include flex-grid-column(8);    
+    }
+
+}
+.clientsPhotos {
+    display: inline-block;
+    list-style-type: none;
+}
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+    img {
+        filter: grayscale(100%);
+        &:hover {
+            filter: grayscale(0);
+            transition: all 0.15s ease-in-out;
+        }
+    }
+}
+.clients-section {
+    margin-bottom: 96px;
+}
+.product-sections {
+    text-align: center;
+    margin-bottom: 96px;
+    h4 {
+        font-weight: 900;
+        font-size: 36px;
+    }
+}
+.footer-cointainer {
+    background-color: $footer-color;
+    padding-top: 24px;
+    padding-bottom: 0;
+    display: flex;
+    color: $bg-color;
+    p {
+        line-height: 18px;
+        font-size: 12px;
+    }
+}
+.footer-social {
+    .social {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        margin-right: 15px;
+        text-indent: -9999px;
+        &:hover {
+            background-color: dodgerblue;
+        }
+    }
+    
+    .social-facebook {
+        background-image: url(../img/sprites/facebook.png);
+    }
+    
+    .social-twitter {
+        background-image: url(../img/sprites/twitter.png);
+    }
+    
+    .social-instagram {
+        background-image: url(../img/sprites/instagram.png);
+    }
+}
+h5 {
+    width: 100%;
+    font-weight: 700px;
+    font-size: 14px;
+}
+.footer-logo {
+    .logo {
+        color: $bg-color;
+    }
+}

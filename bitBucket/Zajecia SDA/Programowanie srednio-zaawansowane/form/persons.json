@@ -1,0 +1,20 @@
+[
+    {
+    "name": "Jan",
+    "surname" : "Kowalski",
+    "age" : 30,
+    "pesel" : "47031310278"
+},
+{
+    "name": "Piotr",
+    "surname" : "Pies",
+    "age" : 12,
+    "pesel" : "912342343"
+},
+{
+    "name": "Janina",
+    "surname" : "Eloavas",
+    "age" : 30,
+    "pesel" : "91123123123"
+}
+]

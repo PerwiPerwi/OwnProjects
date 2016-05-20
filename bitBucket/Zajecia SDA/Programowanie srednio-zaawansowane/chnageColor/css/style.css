@@ -1,0 +1,8 @@
+p {
+    background-color: black;
+    color: white;
+}
+
+.active {
+    background-color: red;
+}

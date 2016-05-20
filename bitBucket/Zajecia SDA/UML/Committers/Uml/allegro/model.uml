@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_h2GUcAlYEeaAo-sNkh0jug" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_ip7lIAlYEeaAo-sNkh0jug" name="Package1">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_1E_yQAlYEeaAo-sNkh0jug" name="Logowanie"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_25vtYAlYEeaAo-sNkh0jug" name="Przegldanie aukcji"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_CDV4AAlZEeaAo-sNkh0jug" name="Szukanie przedmiotów"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Gv674AlZEeaAo-sNkh0jug" name="Wystawianie aukcji">
+      <include xmi:type="uml:Include" xmi:id="_4tDBkAlZEeaAo-sNkh0jug" addition="_1E_yQAlYEeaAo-sNkh0jug"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_IhkfsAlZEeaAo-sNkh0jug" name="Zakończenie aukcji przed czasem">
+      <include xmi:type="uml:Include" xmi:id="_8pPKUAlZEeaAo-sNkh0jug" addition="_1E_yQAlYEeaAo-sNkh0jug"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_LzyeYAlZEeaAo-sNkh0jug" name="Przegldanie historii"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Pw4mEAlZEeaAo-sNkh0jug" name="Licytowanie">
+      <include xmi:type="uml:Include" xmi:id="_-adQUAlZEeaAo-sNkh0jug" addition="_1E_yQAlYEeaAo-sNkh0jug"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_SDzD4AlZEeaAo-sNkh0jug" name="Anulacja sprzedaży">
+      <include xmi:type="uml:Include" xmi:id="_9jImwAlZEeaAo-sNkh0jug" addition="_1E_yQAlYEeaAo-sNkh0jug"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_onyDoAlYEeaAo-sNkh0jug" name="Kupujcy"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_pnE9cAlYEeaAo-sNkh0jug" name="Sprzedajcy"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mwkN4AlZEeaAo-sNkh0jug" memberEnd="_mwlcAQlZEeaAo-sNkh0jug _mwmDEAlZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mwk08AlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mwlcAAlZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_mwlcAQlZEeaAo-sNkh0jug" name="logowanie" type="_1E_yQAlYEeaAo-sNkh0jug" association="_mwkN4AlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_mwmDEAlZEeaAo-sNkh0jug" name="kupujcy" type="_onyDoAlYEeaAo-sNkh0jug" association="_mwkN4AlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_nKlQYAlZEeaAo-sNkh0jug" memberEnd="_nKmegAlZEeaAo-sNkh0jug _nKnFkAlZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nKl3cAlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nKl3cQlZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_nKmegAlZEeaAo-sNkh0jug" name="logowanie" type="_1E_yQAlYEeaAo-sNkh0jug" association="_nKlQYAlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_nKnFkAlZEeaAo-sNkh0jug" name="sprzedajcy" type="_pnE9cAlYEeaAo-sNkh0jug" association="_nKlQYAlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wZIDkAlZEeaAo-sNkh0jug" memberEnd="_wZfP8AlZEeaAo-sNkh0jug _wZfP8QlZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wZeo4AlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wZeo4QlZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wZfP8AlZEeaAo-sNkh0jug" name="licytowanie" type="_Pw4mEAlZEeaAo-sNkh0jug" association="_wZIDkAlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wZfP8QlZEeaAo-sNkh0jug" name="kupujcy" type="_onyDoAlYEeaAo-sNkh0jug" association="_wZIDkAlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yhgFUAlZEeaAo-sNkh0jug" memberEnd="_yhgsYglZEeaAo-sNkh0jug _yhhTcAlZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yhgsYAlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yhgsYQlZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yhgsYglZEeaAo-sNkh0jug" name="szukanie przedmiotów" type="_CDV4AAlZEeaAo-sNkh0jug" association="_yhgFUAlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_yhhTcAlZEeaAo-sNkh0jug" name="kupujcy" type="_onyDoAlYEeaAo-sNkh0jug" association="_yhgFUAlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_y9bMUAlZEeaAo-sNkh0jug" memberEnd="_y9bzYQlZEeaAo-sNkh0jug _y9bzYglZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_y9bMUQlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_y9bzYAlZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_y9bzYQlZEeaAo-sNkh0jug" name="przegldanie aukcji" type="_25vtYAlYEeaAo-sNkh0jug" association="_y9bMUAlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_y9bzYglZEeaAo-sNkh0jug" name="kupujcy" type="_onyDoAlYEeaAo-sNkh0jug" association="_y9bMUAlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0XTJUAlZEeaAo-sNkh0jug" memberEnd="_0XUXcQlZEeaAo-sNkh0jug _0XU-gAlZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0XTwYAlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0XUXcAlZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0XUXcQlZEeaAo-sNkh0jug" name="wystawianie aukcji" type="_Gv674AlZEeaAo-sNkh0jug" association="_0XTJUAlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0XU-gAlZEeaAo-sNkh0jug" name="sprzedajcy" type="_pnE9cAlYEeaAo-sNkh0jug" association="_0XTJUAlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0-SQ0AlZEeaAo-sNkh0jug" memberEnd="_0-Te8QlZEeaAo-sNkh0jug _0-Te8glZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0-S34AlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0-Te8AlZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0-Te8QlZEeaAo-sNkh0jug" name="zakończenie aukcji przed czasem" type="_IhkfsAlZEeaAo-sNkh0jug" association="_0-SQ0AlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0-Te8glZEeaAo-sNkh0jug" name="sprzedajcy" type="_pnE9cAlYEeaAo-sNkh0jug" association="_0-SQ0AlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1aedkAlZEeaAo-sNkh0jug" memberEnd="_1aedkwlZEeaAo-sNkh0jug _1afEoAlZEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1aedkQlZEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1aedkglZEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1aedkwlZEeaAo-sNkh0jug" name="anulacja sprzedaży" type="_SDzD4AlZEeaAo-sNkh0jug" association="_1aedkAlZEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1afEoAlZEeaAo-sNkh0jug" name="sprzedajcy" type="_pnE9cAlYEeaAo-sNkh0jug" association="_1aedkAlZEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BstrQAlaEeaAo-sNkh0jug" memberEnd="_Bsu5YAlaEeaAo-sNkh0jug _Bsu5YQlaEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BsuSUAlaEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BsuSUQlaEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Bsu5YAlaEeaAo-sNkh0jug" name="przegldanie historii" type="_LzyeYAlZEeaAo-sNkh0jug" association="_BstrQAlaEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Bsu5YQlaEeaAo-sNkh0jug" name="sprzedajcy" type="_pnE9cAlYEeaAo-sNkh0jug" association="_BstrQAlaEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_E25IQAlaEeaAo-sNkh0jug" memberEnd="_E26WYglaEeaAo-sNkh0jug _E269cAlaEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E26WYAlaEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_E26WYQlaEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_E26WYglaEeaAo-sNkh0jug" name="przegldanie historii" type="_LzyeYAlZEeaAo-sNkh0jug" association="_E25IQAlaEeaAo-sNkh0jug"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_E269cAlaEeaAo-sNkh0jug" name="kupujcy" type="_onyDoAlYEeaAo-sNkh0jug" association="_E25IQAlaEeaAo-sNkh0jug"/>
+  </packagedElement>
+</uml:Model>

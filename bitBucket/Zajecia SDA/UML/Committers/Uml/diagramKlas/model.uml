@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_CaoQQAlREeasTJzDV49xFw" name="RootElement">
+  <packagedElement xmi:type="uml:Class" xmi:id="_07WVwAlSEeaAo-sNkh0jug" name="Class1">
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_2NM_MAlSEeaAo-sNkh0jug" name=""/>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_574QYAlSEeaAo-sNkh0jug" name=""/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__HkSIAlSEeaAo-sNkh0jug" name="Wycieczka">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CgadQAlTEeaAo-sNkh0jug" name="Attribute1"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_J9sHIAlTEeaAo-sNkh0jug" name="kraj" type="_nk9uAAlTEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pVt58AlTEeaAo-sNkh0jug" name="miasto" type="_u0ZwMAlTEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_v49kgAlTEeaAo-sNkh0jug" name="czasTrwania" type="_7A668AlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_F3DhkAlWEeaAo-sNkh0jug" name="uczestnik" type="_3VgOkAlTEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_YEcfEQlWEeaAo-sNkh0jug" name="uczestnik" type="_3VgOkAlTEeaAo-sNkh0jug">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ptuC4AlWEeaAo-sNkh0jug"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ptxtQAlWEeaAo-sNkh0jug" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0xL3sAlTEeaAo-sNkh0jug" name="Rezerwuj"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_u0ZwMAlTEeaAo-sNkh0jug" name="String"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_7A668AlUEeaAo-sNkh0jug" name="Time"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_nk9uAAlTEeaAo-sNkh0jug" name="String"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3VgOkAlTEeaAo-sNkh0jug" name="Uczestnik">
+    <generalization xmi:type="uml:Generalization" xmi:id="_q37osAlVEeaAo-sNkh0jug" general="_Cj6yUAlVEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fazTgAlUEeaAo-sNkh0jug" name="imie" type="_lE5IgAlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_gPYLEAlUEeaAo-sNkh0jug" name="nazwisko" type="_jCsnQAlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5xoycQlWEeaAo-sNkh0jug" name="wycieczka" type="__HkSIAlSEeaAo-sNkh0jug" association="_5xnkUAlWEeaAo-sNkh0jug">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FPeuwAlXEeaAo-sNkh0jug"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FPiZIAlXEeaAo-sNkh0jug" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CIzZEAlUEeaAo-sNkh0jug" name="Aktualizuj"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_jCsnQAlUEeaAo-sNkh0jug" name="String"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_lE5IgAlUEeaAo-sNkh0jug" name="String"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5BX6gAlTEeaAo-sNkh0jug" name="Etap">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_G2vH0AlUEeaAo-sNkh0jug" name="miejsce" type="_1vEm0AlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_IbL9IAlUEeaAo-sNkh0jug" name="obiekt" type="_4FN-0AlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QJeMkAlWEeaAo-sNkh0jug" name="pilot" type="_P0VU8AlUEeaAo-sNkh0jug" association="_QJc-cAlWEeaAo-sNkh0jug"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_1vEm0AlUEeaAo-sNkh0jug" name="String"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_4FN-0AlUEeaAo-sNkh0jug" name="String"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_P0VU8AlUEeaAo-sNkh0jug" name="Pilot">
+    <generalization xmi:type="uml:Generalization" xmi:id="_zqlKEAlVEeaAo-sNkh0jug" general="_Cj6yUAlVEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_SxK5gAlUEeaAo-sNkh0jug" name="imie" type="_VleNIAlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_XAGYEAlUEeaAo-sNkh0jug" name="nazwisko" type="_ZxaCEAlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QJdlgglWEeaAo-sNkh0jug" name="etap" type="_5BX6gAlTEeaAo-sNkh0jug" association="_QJc-cAlWEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lg9HgQlWEeaAo-sNkh0jug" name="wycieczka" type="__HkSIAlSEeaAo-sNkh0jug" association="_lg75YAlWEeaAo-sNkh0jug">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ybfrUAlWEeaAo-sNkh0jug"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ybhggAlWEeaAo-sNkh0jug" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QDbZgAlXEeaAo-sNkh0jug" name="jezyki" type="_b5izQAlUEeaAo-sNkh0jug" association="_QDY9QAlXEeaAo-sNkh0jug">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SmLDEAlXEeaAo-sNkh0jug"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SmOtcAlXEeaAo-sNkh0jug" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_pEULcAlUEeaAo-sNkh0jug" name="Aktualizuj"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qV8ycAlUEeaAo-sNkh0jug" name="Czy zna jezyk"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_VleNIAlUEeaAo-sNkh0jug" name="String"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_ZxaCEAlUEeaAo-sNkh0jug" name="String"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_b5izQAlUEeaAo-sNkh0jug" name="Jezyki">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_wKtoTglUEeaAo-sNkh0jug" name="nazwa" type="_yd3UwAlUEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QDaycQlXEeaAo-sNkh0jug" name="pilot" type="_P0VU8AlUEeaAo-sNkh0jug" association="_QDY9QAlXEeaAo-sNkh0jug"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_yd3UwAlUEeaAo-sNkh0jug" name="String"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Cj6yUAlVEeaAo-sNkh0jug" name="Osoba">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_EvHekAlVEeaAo-sNkh0jug" name="wiek" type="_LfaGoAlVEeaAo-sNkh0jug"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_He9I8AlVEeaAo-sNkh0jug" name="adres" type="_OCOosAlVEeaAo-sNkh0jug"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_LfaGoAlVEeaAo-sNkh0jug" name="int"/>
+    <nestedClassifier xmi:type="uml:DataType" xmi:id="_OCOosAlVEeaAo-sNkh0jug" name="String"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QJc-cAlWEeaAo-sNkh0jug" memberEnd="_QJdlgglWEeaAo-sNkh0jug _QJeMkAlWEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QJdlgAlWEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QJdlgQlWEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_lg75YAlWEeaAo-sNkh0jug" memberEnd="_lg9HgQlWEeaAo-sNkh0jug _lg9ukAlWEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lg8gcAlWEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lg9HgAlWEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_lg9ukAlWEeaAo-sNkh0jug" name="pilot" type="_P0VU8AlUEeaAo-sNkh0jug" association="_lg75YAlWEeaAo-sNkh0jug"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5xnkUAlWEeaAo-sNkh0jug" memberEnd="_5xoycQlWEeaAo-sNkh0jug _5xoycglWEeaAo-sNkh0jug" navigableOwnedEnd="_5xoycglWEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5xoLYAlWEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5xoycAlWEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5xoycglWEeaAo-sNkh0jug" name="uczestnik" type="_3VgOkAlTEeaAo-sNkh0jug" association="_5xnkUAlWEeaAo-sNkh0jug">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_8Dan0AlWEeaAo-sNkh0jug"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_8DdEEAlWEeaAo-sNkh0jug" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QDY9QAlXEeaAo-sNkh0jug" memberEnd="_QDaycQlXEeaAo-sNkh0jug _QDbZgAlXEeaAo-sNkh0jug">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QDaLYAlXEeaAo-sNkh0jug" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QDaycAlXEeaAo-sNkh0jug" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+</uml:Model>

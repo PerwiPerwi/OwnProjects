@@ -1,0 +1,1 @@
+Person [name=Janina, surnname=Kowalczyk, age=5]

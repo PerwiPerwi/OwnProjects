@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
      <link href="../view/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -8,8 +7,8 @@
       <a class="navbar-brand" href="users.html">CRUD</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="users.html">Userzy</a></li>
-      <li><a href="update.html">Update usera</a><li>
+   		 <li><a href="users.html">Userzy</a></li>
+      <li><a href="adduser.html">Dodawanie Usera</a></li>
     </ul>
   </div>
 </nav>

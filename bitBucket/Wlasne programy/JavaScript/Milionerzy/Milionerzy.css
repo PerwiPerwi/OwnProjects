@@ -1,0 +1,156 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-02-25, 17:51:39
+    Author     : RENT
+*/
+body{
+    background-image:url('img/tlo.jpg');
+    font-family: Tahoma;
+}
+#kontener{
+    top:30%;
+    width: 600px;
+    height: 300px;
+    margin:0 auto;  
+}
+#pytanie{
+    text-align: center;
+    height: 50px;
+    border: solid black;
+   background-color:white;
+   border-radius:5px;
+   font-size: 21px;
+   overflow: hidden;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul>li{
+    list-style-type: none;
+    padding:10px;
+    border: 1px solid grey;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 7px;
+}
+ul li.pytania:hover{
+    transition: 3s;
+    font-size: 19px;
+    background: yellow;
+}
+.przegryw, .wygryw{
+    z-index: 9999;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    font-size: 72pt;
+    text-align: center;
+    display:none;
+    
+}
+.przegryw{
+    font-size: 40px;
+}
+.wygryw{
+    background-color: green;
+    font-size:50px;
+}
+#popOdp{
+    height: 100px;
+    width: 200px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 100px);
+    margin: 0 auto;
+    display: none;
+    font-size: 36px;
+    text-align: center;
+}
+#polNaPol, #pytanieDoPublicznosci,#telefonDoPrzyjaciela{
+    height: 45px;
+    width: 110px;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top:40%;
+    left:62%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 10pt;
+
+}
+   
+#telefonDoPrzyjaciela{
+    top:40%;
+    left:45%;
+}
+
+#pytanieDoPublicznosci{
+    top: 40%;
+    left: 28%;
+}
+    
+.dwadziescia::after{
+    content: '20%';
+    float: right;
+}   
+.czterdziesci::after{
+    content: '40%';
+    float: right;
+}    
+#poczatek{
+    text-align: center;
+}
+div>zdjecie{
+    width: 100px;
+    height: 100px;
+
+}
+#mail{
+    width: 200px;
+    height: 300px;
+    padding: 40px;
+    text-align: center;
+    font-size: 50px;
+    color:white;
+    text-decoration: none;
+    background:red;
+    border:2px solid white;
+    border-radius: 15px;
+}
+.reset{
+    background-color:black;
+    color: white;
+    cursor: pointer;
+    font-size:40px;
+    border: 3px solid white;
+    padding: 30px;
+    border-radius: 15px;
+}
+.reset:hover{
+    transition:1s;
+    background-color: green;
+    color:white;
+    font-size: 50px;
+
+}
+#hubert{
+    width: 600px;
+    height: 400px;
+}

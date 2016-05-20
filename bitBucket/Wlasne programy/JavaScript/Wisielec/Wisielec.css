@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-02-29, 00:40:44
+    Author     : Łuki
+*/
+body{
+    background-color: black;
+    color: white;
+    font-size: 28px;
+
+}
+#pole{
+    width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 45px;
+    min-height: 60px;
+}
+#szubienica{
+    text-align: center;
+    float: left; 
+    width: 450px;
+    min-height: 280px;
+}
+#alfabet{
+    text-align: center;
+    float: left;
+    width: 450px;
+    min-height: 280px;
+}
+.litera{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border: 3px solid white;
+    float: left;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.litera:hover{
+    background-color: yellow;
+    color:black;
+    transition: 1s;
+}
+.reset{
+    background-color:black;
+    color: white;
+    cursor: pointer;
+}
+.reset:hover{
+    transition:1s;
+    background-color: black;
+    color:yellow;
+    font-size: 30px;
+
+}
+#kontenerKategorii{
+    height: 350px;
+    width: 600px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top:14%;
+    left: 25%;
+    margin: 0 auto;
+    display: block;
+    font-size: 36px;
+    text-align: center;
+}
+.kategorie{
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 50px;
+    width: 180px;
+    color: white;
+    border: 2px solid white;
+    background-color: black;
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    border-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 25px;
+}
+#pierwszaKategoria{
+    top:34%;
+    left:2%;
+}
+#drugaKategoria{
+    top: 34%;
+    left: 35%;
+}
+#trzeciaKategoria{
+    top: 34%;
+    left: 68%;
+}
+.kategorie:hover{
+    background-color: yellow;
+    color:black;
+    transition: 1s;
+}

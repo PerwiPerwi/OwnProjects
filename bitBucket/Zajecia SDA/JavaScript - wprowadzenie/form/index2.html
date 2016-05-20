@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>MAGICZNA STRONA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="cw2.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+        <div class="kontenter">
+            
+            <span class="tekst">Imie</span>
+            <div>
+                <input id="name" type="text" name="imie">
+            </div>
+            <div>
+                <span class="tekst"> Nazwisko </span>
+                <input id="surname" type="text" name="nazwisko"> 
+            </div>
+            <span class="tekst"> Wiek </span>
+            <div>
+                <input id="age" type="text" name="wiek">
+            </div>
+          
+            <div>
+                <input id="sex_Woman" type="radio" name="plec" value="Kobieta">
+                <span>
+                    Kobieta  
+                </span>
+                <input id="sex_Man" type="radio" name="plec" value="Mezczyzna">
+                <span>
+                    Mezczyzna
+                </span>
+            </div>
+            <input type="submit" name="Wyslij" title="Wysle formularz" onClick="pokaz()" value="wyslij"/>
+        </div>
+<script src="cw2.js" type="text/javascript"></script>
+    </body>
+</html>

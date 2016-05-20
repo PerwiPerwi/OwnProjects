@@ -1,0 +1,202 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-03-02, 00:12:11
+    Author     : Łuki
+*/
+body{
+    background: #15272B url('../img/Tlo.jpg') repeat-x;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+}
+#kontener{
+    margin: 0 auto;
+    width: 1000px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    overflow: hidden;   
+}
+#logo{
+    font: 40px/50px 'Source Sans Pro', sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    text-decoration: none;
+    display: block;
+    margin: 0 0 10px 10px;
+    color:white;
+}
+header{
+    position: relative;
+    margin-top: 20px;
+    height: 300px;
+}
+header nav{
+    position: absolute;
+    right: 0;
+    top:10px;
+}
+header nav ul{
+    margin:0; 
+    padding: 0;
+}
+header nav ul li{
+    float: left;
+    margin-left: 5px;
+    position: relative;
+    list-style: none;
+}
+header nav ul li a.active{
+    color:#fff;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 4px 8px;
+    display: inline-block;
+}
+a.active:hover{
+    font-size: 19px;
+    background: red; 
+    border-radius: 15px;
+    transition: 1s;
+}
+
+header section#glownyObrazek{
+    background: url('../img/logo.jpg') no-repeat;
+    height: 220px;
+    width: 950px;
+    display: block;
+    border: 5px solid white;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 5px 6px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0 0px 6px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 6px rgba(0,0,0,0.25);
+}
+#glownyObrazek{
+    width: 300px;
+    height: 600px;
+}
+section#glownyObrazek figure{
+    float: right;
+    height: 155px;
+    padding: 20px 0 0 40px;
+    width: 270px;
+    background-color: rgba(0,0,0,0.5);
+}
+section#glownyObrazek figure h2{
+    font-family: 'Oswald', sans-serif;
+    color:#fff;
+    font-size: 28px;
+    line-height: 3px;
+    margin-bottom: 5px;
+}
+section#glownyObrazek figure h2#drugi{
+    margin-left: 40px;
+    padding-top: 50px;
+    padding-bottom:33px;
+}
+section#glownyObrazek figure h2#trzeci{
+    margin-left: 80px;
+}
+#zawartoscKontenera{
+    padding: 0 10px;
+    overflow: hidden;
+}
+#zawartoscKontenera strong{
+    color: #f9d467;
+}
+#zawartoscKontenera h2{
+    font-family: 'GraublauWebBold', sans-serif;
+    color:white;
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    text-shadow: 0 0 1px transparent;
+}
+li{
+    list-style: none;
+    list-style-type:none;
+}
+#zawartosc{
+    float: left;
+    width: 620px;
+}
+#zawartosc.section.news ul{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#zawartosc section.news ul li{
+    float:left;
+    width: 300px;
+    margin-right: 20px;
+}
+#zawartosc section.news ul li h3{
+    color:#f9d467;
+}
+#pierwszy{
+    margin-left: 100px;
+    float: left;
+    font: white;
+}
+#drugi{
+    float:left;
+    margin-left: 600px;
+}
+footer{
+    clear: both;
+    margin-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    background: #175061; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #175061 0%, #1f7989 50%, #196e7f 51%, #29abbf 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #175061 0%,#1f7989 50%,#196e7f 51%,#29abbf 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #175061 0%,#1f7989 50%,#196e7f 51%,#29abbf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#175061', endColorstr='#29abbf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    display: block;
+    overflow: hidden;
+    -moz-border-radius: 5px;
+    border-radius: 5px
+}
+footer nav ul{
+    margin:0;
+    padding:0;
+}
+footer nav ul li{
+    float: left;
+    margin-left: 20px;
+    position: relative;
+    list-style: none;
+}
+footer nav ul li a{
+    text-decoration: none;
+    color:inherit;
+}
+footer nav ul li a:hover{
+    font-size: 17px;
+    transition: 1s;
+    color:yellow;
+    border-radius: 15px;
+}
+.prawa{
+    margin-top: 15px;
+    float: right;
+}
+.lewa{
+    float: left;
+}
+.noclegi{
+    color:white;
+    text-decoration: none;
+    font-size: 19px;
+}
+.hotele{
+    padding: 75px;
+}
+p{
+    text-align: justify;
+    padding-right: 30px;
+}

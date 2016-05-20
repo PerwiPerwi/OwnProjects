@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="574.0" prefWidth="327.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddStudent">
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="190.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="111.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="147.0" minHeight="0.0" prefHeight="40.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="399.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="301.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="301.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="301.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="301.0" minHeight="10.0" prefHeight="49.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="70.0" prefWidth="306.0" text="Dodanie studenta MSI" GridPane.columnSpan="2147483647">
+                     <font>
+                        <Font name="Aharoni Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#exitProgram" prefHeight="39.0" prefWidth="79.0" text="Wyjście" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="8" />
+                  <Button fx:id="back" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="114.0" text="Powrót do Menu" textAlignment="CENTER" GridPane.rowIndex="8" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="21.0" prefWidth="179.0" text="Wprowadź imię:" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="21.0" prefWidth="192.0" text="Wprowadź nazwisko:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="55.0" prefWidth="190.0" text="Podaj ocene z Kontroli i&#10;Audytu w Bezpieczeństwie: &#10;" GridPane.rowIndex="3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="55.0" prefWidth="190.0" text="Podaj ocene z Ochrny Prawnej &#10;Funkcjonariuszy Publicznych: &#10;" GridPane.rowIndex="4">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="59.0" prefWidth="190.0" text="Podaj ocene z Oceny&#10;Ryzyka i Prognozowania w&#10;Bezpieczeństwie: " GridPane.rowIndex="5">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="65.0" prefWidth="190.0" text="Podaj ocene z Systemów&#10;Informatycznych &#10;w Administracji Publicznej: " GridPane.rowIndex="6">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="322.0" text="Dodaj studenta" GridPane.columnSpan="2147483647" GridPane.rowIndex="7" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="7.0" right="7.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </left>
+</BorderPane>

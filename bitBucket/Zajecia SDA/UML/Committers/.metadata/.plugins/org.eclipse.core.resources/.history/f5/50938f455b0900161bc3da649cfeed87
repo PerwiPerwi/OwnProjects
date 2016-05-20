@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_h2GUcAlYEeaAo-sNkh0jug" name="RootElement">
+  <packagedElement xmi:type="uml:Package" xmi:id="_ip7lIAlYEeaAo-sNkh0jug" name="Package1"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_onyDoAlYEeaAo-sNkh0jug" name="Actor1"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_pnE9cAlYEeaAo-sNkh0jug" name="Actor2"/>
+</uml:Model>

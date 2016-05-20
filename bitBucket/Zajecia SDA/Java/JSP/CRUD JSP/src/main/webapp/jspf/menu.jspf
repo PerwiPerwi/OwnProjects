@@ -1,0 +1,26 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<head>
+     <link href="../view/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="users.html">CRUD</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="users.html">Userzy</a></li>
+      <li><a href="adduser.html">Dodawanie usera</a></li> 
+    </ul>
+  </div>
+</nav>
+<br clear="all"/>
+
+
+
+<!-- <tableborder="1" width="1000" align="center">
+    <tr>
+    li class="active"><a href="#">Home</a></li>
+        <a href="users.html">Userzy</a>
+        <a href="adduser.html">Dodawanie usera</a>
+    </tr>
+</table> -->

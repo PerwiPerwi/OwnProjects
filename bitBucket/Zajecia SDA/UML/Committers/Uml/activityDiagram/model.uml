@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_cLTF4Ak5EeasTJzDV49xFw" name="RootElement">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_cLWJMAk5EeasTJzDV49xFw" name="Restauracja" node="_sizf0Ak5EeasTJzDV49xFw _t1-X4Ak5EeasTJzDV49xFw _dp25IAk6EeasTJzDV49xFw _0iKGkAk6EeasTJzDV49xFw _Dxf-kAk7EeasTJzDV49xFw _KhUFgAk7EeasTJzDV49xFw _W1jB0Ak8EeasTJzDV49xFw _czKPwAk8EeasTJzDV49xFw _kSrVUAk8EeasTJzDV49xFw _vjaCsAk8EeasTJzDV49xFw _-TZsQAk8EeasTJzDV49xFw" group="_pHSbMAk5EeasTJzDV49xFw _p6L3wAk5EeasTJzDV49xFw">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GR238Ak6EeasTJzDV49xFw" target="_t1-X4Ak5EeasTJzDV49xFw" source="_sizf0Ak5EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4XI0EAk6EeasTJzDV49xFw" target="_0iKGkAk6EeasTJzDV49xFw" source="_dp25IAk6EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5O6woAk6EeasTJzDV49xFw" target="_t1-X4Ak5EeasTJzDV49xFw" source="_0iKGkAk6EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_7ROmoAk6EeasTJzDV49xFw" target="_dp25IAk6EeasTJzDV49xFw" source="_t1-X4Ak5EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GDw8IAk7EeasTJzDV49xFw" target="_Dxf-kAk7EeasTJzDV49xFw" source="_dp25IAk6EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_NjakkAk7EeasTJzDV49xFw" target="_KhUFgAk7EeasTJzDV49xFw" source="_Dxf-kAk7EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_arXc0Ak8EeasTJzDV49xFw" target="_W1jB0Ak8EeasTJzDV49xFw" source="_KhUFgAk7EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jMHV4Ak8EeasTJzDV49xFw" target="_czKPwAk8EeasTJzDV49xFw" source="_W1jB0Ak8EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_prwS0Ak8EeasTJzDV49xFw" target="_kSrVUAk8EeasTJzDV49xFw" source="_czKPwAk8EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_qoeZwAk8EeasTJzDV49xFw" target="_KhUFgAk7EeasTJzDV49xFw" source="_kSrVUAk8EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_x72gwAk8EeasTJzDV49xFw" target="_vjaCsAk8EeasTJzDV49xFw" source="_czKPwAk8EeasTJzDV49xFw"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_B44lMAk9EeasTJzDV49xFw" target="_-TZsQAk8EeasTJzDV49xFw" source="_vjaCsAk8EeasTJzDV49xFw"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_pHSbMAk5EeasTJzDV49xFw" name="user" node="_sizf0Ak5EeasTJzDV49xFw _t1-X4Ak5EeasTJzDV49xFw _dp25IAk6EeasTJzDV49xFw _Dxf-kAk7EeasTJzDV49xFw _KhUFgAk7EeasTJzDV49xFw _W1jB0Ak8EeasTJzDV49xFw _czKPwAk8EeasTJzDV49xFw _vjaCsAk8EeasTJzDV49xFw _-TZsQAk8EeasTJzDV49xFw"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_p6L3wAk5EeasTJzDV49xFw" name="System" node="_0iKGkAk6EeasTJzDV49xFw _kSrVUAk8EeasTJzDV49xFw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_sizf0Ak5EeasTJzDV49xFw" name="Start" outgoing="_GR238Ak6EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_t1-X4Ak5EeasTJzDV49xFw" name="Logowanie" incoming="_GR238Ak6EeasTJzDV49xFw _5O6woAk6EeasTJzDV49xFw" outgoing="_7ROmoAk6EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_dp25IAk6EeasTJzDV49xFw" name="Udane logowanie?" incoming="_7ROmoAk6EeasTJzDV49xFw" outgoing="_4XI0EAk6EeasTJzDV49xFw _GDw8IAk7EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_0iKGkAk6EeasTJzDV49xFw" name="Wyświetl bład" incoming="_4XI0EAk6EeasTJzDV49xFw" outgoing="_5O6woAk6EeasTJzDV49xFw" inPartition="_p6L3wAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_Dxf-kAk7EeasTJzDV49xFw" name="Zobacz restauracje" incoming="_GDw8IAk7EeasTJzDV49xFw" outgoing="_NjakkAk7EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_KhUFgAk7EeasTJzDV49xFw" name="Zobacz Menu" incoming="_NjakkAk7EeasTJzDV49xFw _qoeZwAk8EeasTJzDV49xFw" outgoing="_arXc0Ak8EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_W1jB0Ak8EeasTJzDV49xFw" name="Zamów posiłek" incoming="_arXc0Ak8EeasTJzDV49xFw" outgoing="_jMHV4Ak8EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_czKPwAk8EeasTJzDV49xFw" name="Czy posiłek jset dostępny?" incoming="_jMHV4Ak8EeasTJzDV49xFw" outgoing="_prwS0Ak8EeasTJzDV49xFw _x72gwAk8EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_kSrVUAk8EeasTJzDV49xFw" name="Wyświetl komunikat o niedostępności" incoming="_prwS0Ak8EeasTJzDV49xFw" outgoing="_qoeZwAk8EeasTJzDV49xFw" inPartition="_p6L3wAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_vjaCsAk8EeasTJzDV49xFw" name="Przejdź do płatności" incoming="_x72gwAk8EeasTJzDV49xFw" outgoing="_B44lMAk9EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+    <node xmi:type="uml:FlowFinalNode" xmi:id="_-TZsQAk8EeasTJzDV49xFw" name="Koniec" incoming="_B44lMAk9EeasTJzDV49xFw" inPartition="_pHSbMAk5EeasTJzDV49xFw"/>
+  </packagedElement>
+</uml:Model>

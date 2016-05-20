@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-03-17, 13:16:51
+    Author     : Duży Łuki
+*/
+.gameBoard {
+    margin-top: 40px;
+    left: 30%;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    width: 440px;
+    height: 355px;
+    box-shadow: 1px 1px 1px #fff, inset 1px 1px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+.tiles{
+    cursor: pointer;
+    position: absolute;
+    float: left;
+    width: 80px;
+    height: 80px;
+    background: lightblue url(img/title.png) center center no-repeat;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), inset 1px 1px 1px #fff, 1px 1px 3px rgba(0,0,0,1);
+}
+
+#startGame{
+    margin-top: 30px;
+    margin-left: 570px;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: #33cc00;
+    color: white;
+   transform: scale(1.3);
+}
+
+#startGame:hover{
+    color: #ffff33;
+    transition: 1s;
+}
+
+body .points{
+    margin-top: 30px;
+    margin-left: 420px;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}

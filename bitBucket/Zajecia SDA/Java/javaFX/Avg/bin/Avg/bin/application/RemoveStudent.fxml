@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="455.0" prefWidth="301.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RemoveStudent">
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <GridPane prefHeight="439.0" prefWidth="301.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="10.0" prefWidth="148.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="153.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="137.0" minHeight="10.0" prefHeight="132.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="156.0" minHeight="10.0" prefHeight="72.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="105.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="187.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="removeMsi" mnemonicParsing="false" onAction="#removeMsiStudent" prefHeight="68.0" prefWidth="141.0" text="MSI" GridPane.columnSpan="2147483647" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="70.0" prefWidth="306.0" text="Usunięcie studenta" GridPane.columnSpan="2147483647">
+                     <font>
+                        <Font name="Aharoni Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exitProgram" prefHeight="63.0" prefWidth="259.0" text="Wyjście" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+                  <Button fx:id="removeBw" mnemonicParsing="false" onAction="#removeBwStudent" prefHeight="70.0" prefWidth="141.0" text="BW" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="63.0" prefWidth="259.0" text="Powrót do Menu" GridPane.rowIndex="3" />
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="21.0" prefWidth="291.0" text="Wybierz kierunek:" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </bottom>
+      </BorderPane>
+   </left>
+</BorderPane>
