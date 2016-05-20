@@ -8,7 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+//@Slf4j
 public class UpdateUserFormServlet extends HttpServlet {
 	
 	private UserDAO userDAO = new UserDAO();

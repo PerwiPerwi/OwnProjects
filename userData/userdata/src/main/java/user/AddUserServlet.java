@@ -20,6 +20,7 @@ public class AddUserServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("add user");
 		String errorMsg = "";
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");

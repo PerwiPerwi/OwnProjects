@@ -16,6 +16,7 @@ public class UserServlet extends HttpServlet {
 	private UserDAO userDAO = new UserDAO();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("User");
 		String id = request.getParameter("id");
 		Optional<User> optionalUser = getUserById(id);
 

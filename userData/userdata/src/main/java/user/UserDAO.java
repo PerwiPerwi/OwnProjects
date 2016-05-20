@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+//@Slf4j
 public class UserDAO {
 
 	private Connection conn;
@@ -75,13 +75,13 @@ public class UserDAO {
 		return Optional.of(null);
 	}
 
-	public boolean updateUser(int id, String name, String mail) {
+	public boolean updateUser(String name, String mail, int id) {
 		String query = "UPDATE users set name=?, email=? where id =?";
 		try {
 			PreparedStatement preparedStatement = conn.prepareStatement(query);
-			preparedStatement.setInt(3, id);
 			preparedStatement.setString(1, name);
 			preparedStatement.setString(2, mail);
+			preparedStatement.setInt(3, id);
 
 			preparedStatement.executeUpdate();
 			preparedStatement.close();

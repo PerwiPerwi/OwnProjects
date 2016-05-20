@@ -16,7 +16,7 @@ public class UpdateUserServlet extends HttpServlet {
 
 	UserDAO userDao = new UserDAO();
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String errorMsg = "";
 		String name = request.getParameter("name");
@@ -35,7 +35,7 @@ public class UpdateUserServlet extends HttpServlet {
 			return;
 		}
 
-		boolean result = userDao.updateUser(userId, name, email);
+		boolean result = userDao.updateUser(name, email, userId);
 		if (!result) {
 			// log.error("Problem z usunieciem usera o id=" + id);
 			request.setAttribute("_ERROR", "Problem z aktualizacj¹ usera o id = " + userId);

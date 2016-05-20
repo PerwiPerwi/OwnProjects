@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Dodawanie usera</title>
-<link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<%@include file="../jspf/message.jspf"%>

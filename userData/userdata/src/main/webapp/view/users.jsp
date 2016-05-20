@@ -11,6 +11,7 @@
 <body>
 <%@include file="../jspf/message.jspf"%>
 <%@include file="../jspf/menu.jspf"%>
+<div>
 <table class="table-striped">
 <tr>
 <c:if test="${users.size() == 0}">
@@ -32,6 +33,7 @@
     
     
 </c:forEach>
+</div>
 </div>
 </body>
 </html>

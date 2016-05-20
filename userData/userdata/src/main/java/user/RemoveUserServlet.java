@@ -1,13 +1,13 @@
 package user;
 
-import lombok.extern.slf4j.Slf4j;
+import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 //@Slf4j
 public class RemoveUserServlet extends HttpServlet {
@@ -15,6 +15,7 @@ public class RemoveUserServlet extends HttpServlet {
 	private UserDAO userDAO = new UserDAO();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Remove");
 		String errorMsg = "";
 		String id = request.getParameter("id");
 		Integer userId = Integer.valueOf(id);
