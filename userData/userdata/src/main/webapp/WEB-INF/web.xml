@@ -8,7 +8,7 @@
 	version="3.1">
 
 	<display-name>UserData</display-name>
-
+<!-- 
 	<servlet>
 		<servlet-name>UserServlet</servlet-name>
 		<servlet-class>user.UserServlet</servlet-class>
@@ -17,61 +17,61 @@
 		<servlet-name>UserServlet</servlet-name>
 		<url-pattern>/user.html</url-pattern>
 	</servlet-mapping>
+ -->
 
-
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>AddUserServlet</servlet-name>
 		<servlet-class>user.AddUserServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AddUserServlet</servlet-name>
-		<url-pattern>/addUser.do</url-pattern>
-	</servlet-mapping>
+		<url-pattern>addUser.do</url-pattern>
+	</servlet-mapping> -->
 
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>AddUserFormServlet</servlet-name>
 		<servlet-class>user.AddUserFormServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AddUserFormServlet</servlet-name>
 		<url-pattern>/adduser.html</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 	
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>UpdateUserServlet</servlet-name>
 		<servlet-class>user.UpdateUserServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UpdateUserServlet</servlet-name>
-		<url-pattern>/updateUser.do</url-pattern>
-	</servlet-mapping>
+		<url-pattern>updateUser.do</url-pattern>
+	</servlet-mapping> -->
 	
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>UpdateUserFormServlet</servlet-name>
 		<servlet-class>user.UpdateUserFormServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UpdateUserFormServlet</servlet-name>
 		<url-pattern>/update.html</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 	
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>RemoveUserServlet</servlet-name>
 		<servlet-class>user.RemoveUserServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>RemoveUserServlet</servlet-name>
-		<url-pattern>/removeUser.do</url-pattern>
-	</servlet-mapping>
+		<url-pattern>removeUser.do</url-pattern>
+	</servlet-mapping> -->
 	
-	<servlet>
+<!-- 	<servlet>
 		<servlet-name>UsersServlet</servlet-name>
 		<servlet-class>user.UsersServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>UsersServlet</servlet-name>
 		<url-pattern>/users.html</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 
 	<welcome-file-list>
 		<welcome-file>users.html</welcome-file>

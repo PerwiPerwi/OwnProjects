@@ -9,7 +9,7 @@
 	<h2>${user}</h2>
 	<div class="col-md-4">
 		<h3>Wpisz nowe dane do aktualizacji</h3>
-		<form name="updateUser" action="/updateUser.do?id=${user.getId()}"
+		<form name="updateUser" action="updateUser.do?id=${user.getId()}"
 			method="post">
 			<p>${user.getId()}</p>
 			<div class="form-group">
