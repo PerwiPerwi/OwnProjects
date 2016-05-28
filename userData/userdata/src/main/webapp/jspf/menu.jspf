@@ -1,4 +1,6 @@
 <head>
+<link href="../resources/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">     
 </head>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -12,7 +14,6 @@
   </div>
 </nav>
 <br clear="all"/>
-
 
 
 <!-- <tableborder="1" width="1000" align="center">

@@ -8,8 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-//@Slf4j
+@WebServlet("/removeUser.do")
 public class RemoveUserServlet extends HttpServlet {
 
 	private UserDAO userDAO = new UserDAO();

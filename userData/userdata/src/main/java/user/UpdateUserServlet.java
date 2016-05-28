@@ -4,12 +4,13 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
-
+@WebServlet("/updateUser.do")
 public class UpdateUserServlet extends HttpServlet {
 
 	private static final Logger log = Logger.getLogger(AddUserServlet.class);
@@ -45,7 +46,7 @@ public class UpdateUserServlet extends HttpServlet {
 		}
 
 		request.setAttribute("_OK", "Zaaktualizowano usera o id = " + userId);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/view/users.html");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/users.html");
 		requestDispatcher.forward(request, response);
 	}
 }

@@ -4,13 +4,14 @@ import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Optional;
 
-//@Slf4j
+@WebServlet("/user.html")
 public class UserServlet extends HttpServlet {
 
 	private UserDAO userDAO = new UserDAO();

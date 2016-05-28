@@ -2,11 +2,12 @@ package user;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+@WebServlet("/users.html")
 public class UsersServlet extends HttpServlet {
 
 	private UserDAO userDAO = new UserDAO();

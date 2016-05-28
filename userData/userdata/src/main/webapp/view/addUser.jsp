@@ -10,7 +10,7 @@
 	<%@include file="../jspf/message.jspf"%>
 	<%@include file="../jspf/menu.jspf"%>
 
-	<form name="addUser" action="/addUser.do" method="post">
+	<form name="addUser" action="addUser.do" method="post">
 		<div class="form-group">
 			<label for="nm">Name:</label> <input type="text" name="name"
 				class="form-control" id="nm">
