@@ -11,7 +11,6 @@
 		<h3>Wpisz nowe dane do aktualizacji</h3>
 		<form name="updateUser" action="/updateUser.do?id=${user.getId()}"
 			method="post">
-			<p>${user.getId()}</p>
 			<div class="form-group">
 				<label for="nm">Imie:</label> <input type="text" name="name"
 					class="form-control" id="nm">
