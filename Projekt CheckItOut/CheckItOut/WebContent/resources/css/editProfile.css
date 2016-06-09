@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+
+a {
+	color: white;
+		font-weight: 600;
+}
+
+a:hover {
+	text-decoration: none;
+	color: white;
+}
+
+.delete {
+	margin-top: 3px;
+	text-align: center;
+	background-color: #FA8B60;
+	padding: 15px;
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+
+.delete:HOVER {
+	color: white;
+	text-decoration: none;
+}
+
+.delete:active {
+	color: white;
+	text-decoration: none;
+}
+
+.editProfile {
+	text-align: center;
+	color: white;
+}
+
+.changePhoto {
+	font-weight: 100px;
+	margin-top: 20px;
+	font-size: 20px;
+}
