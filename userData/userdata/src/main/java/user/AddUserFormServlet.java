@@ -18,6 +18,5 @@ public class AddUserFormServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/view/addUser.jsp");
 		requestDispatcher.include(request, response);
-		System.out.println("Do Get ADD USER FROM SERVLET");
 	}
 }

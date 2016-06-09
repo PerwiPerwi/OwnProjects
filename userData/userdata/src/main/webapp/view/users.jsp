@@ -19,6 +19,7 @@
 			<c:when test="${users.size() == 0}">
 				<tr>
 					<td>Brak userów!</td>
+<<<<<<< HEAD
 				<tr>
 			</c:when>
 			<c:otherwise>
@@ -46,6 +47,43 @@
 		</c:choose>
 	</table>
 </div>
+=======
+				</c:if>
+			</tr>
+		</table>
+
+		<div class="list-group">
+			<a href="#" class="list-group-item active"> Dodani userzy </a>
+			<c:forEach items="${users}" var="user">
+				<c:out value="${user}"></c:out>
+				<a href="user.html?id=${user.getId()}" class="list-group-item"><c:out
+						value="Usun"></c:out></a>
+				<a href="update.html?id=${user.getId()}" class="list-group-item"><c:out
+						value="Aktualizuj"></c:out></a>
+
+
+<<<<<<< HEAD
+<div class="list-group">
+  <a href="#" class="list-group-item active">
+    Dodani userzy
+  </a>
+<c:forEach items="${users}" var="user">
+ <%-- <a href="user.html?id=${user.getId()}" class="list-group-item" ><c:out value="${user}"></c:out></a> --%>
+   
+ 	 <c:out value="${user}"></c:out>
+    <a href="user.html?id=${user.getId()}" class="list-group-item" ><c:out value="Usun"></c:out></a>
+    <a href="update.html?id=${user.getId()}" class="list-group-item" ><c:out value="Aktualizuj"></c:out></a>
+    
+    
+</c:forEach>
+</div>
+</div>
+=======
+			</c:forEach>
+		</div>
+	</div>
+>>>>>>> b3ab3e90ec311ffd0fe7536c41c00f7c91c83df2
+>>>>>>> b7d1094720862374d740f6c3e211062875798a3d
 </body>
 </html>
 
