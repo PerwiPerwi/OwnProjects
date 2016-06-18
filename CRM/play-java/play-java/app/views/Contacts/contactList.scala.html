@@ -1,0 +1,54 @@
+@(contactList: List[Contact])(user: User)
+@main("Contact List") {
+    <div class="container">
+    @if(contactList.isEmpty) {
+        <div class="row col col-md-12">
+            <h1 class="mainHeaderContact">@user.getFirstName @user.getLastName, Your Contact List is Empty!</h1>
+            <h2 class="contactHeaderLink"><a href="@routes.ContactsController.addContactForm()" class="newContact">
+                Add New Contact!</a></h2>
+        </div>
+    } else {
+        <div class="contacts">
+            <h1 class="mainHeaderContact">@user.getFirstName @user.getLastName Contacts!</h1>
+            <h2 class="tableHeader">Contact List</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="tableLabel">
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>Phone Number</td>
+                        <td>City</td>
+                        <td>Zip - Code</td>
+                        <td>Street</td>
+                        <td>Description</td>
+                        <td>Registration Date</td>
+                        <td>Edit Contact</td>
+                        <td>Delete Contact</td>
+                    </tr>
+                </thead>
+                <tbody>
+                @for(contact <- contactList) {
+                    <tr>
+                        <td>@contact.getContactName</td>
+                        <td>@contact.getContactData.getEmail</td>
+                        <td>@contact.getContactData.getPhoneNumber</td>
+                        <td>@contact.getContactData.getCity</td>
+                        <td>@contact.getContactData.getZipCode</td>
+                        <td>@contact.getContactData.getStreet</td>
+                        @if(contact.getContactData.getDescription != null){
+                        <td>@contact.getContactData.getDescription</td>
+                        } else {
+                        <td> Not Defined</td>
+                        }
+                        <td>@contact.getRegistrationDate.format("dd/MM/yyyy")</td>
+                        <td><a href="@routes.ContactsController.editContactForm(contact.getId)" class="contactActions">Edit</a></td>
+                        <td><a href="@routes.ContactsController.deleteContact(contact.getId)" class="contactActions deleteUser">Delete</a></td>
+                    </tr>
+                </tbody>
+                }
+            </table>
+        </div>
+    }
+    </div>
+
+}

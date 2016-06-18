@@ -1,0 +1,74 @@
+@(user: User)(userForm: Form[User])
+@main("Edit Contact by Admin") {
+    <div class="form">
+
+        <h1 class="formHeader">Edit Contact @user.getName!</h1>
+        <div class="col-md-8 col-md-offset-4">
+            <img name="profilPicture" width="150px" height="150px"
+            src="@routes.Assets.versioned("images/profilePictures/")@user.getProfilPicture" class="avatar img-circle" alt="avatar" style="margin-left: 20px"/>
+        </div>
+        @helper.form(action = routes.AdminPanelController.editUserByAdmin()) {
+            <h3 class="pictureHref"><a href="@routes.AdminPanelController.deleteUserProfilePictureByAdmin(user.getId)" class="changePhoto">
+                Set Default Photo</a></h3>
+
+            <div class="field-wrap">
+                <h4>Name</h4>
+                @helper.inputText(userForm("name"),
+                    'id -> "name",
+                    'class -> "required",
+                    'autocomplete -> "off",
+                    'placeholder -> "Name - Required",
+                    '_label -> null
+                )
+            </div>
+            <div class="field-wrap">
+                <h4>First Name</h4>
+                @helper.inputText(userForm("firstName"),
+                    'id -> "firstName",
+                    'class -> "required",
+                    'autocomplete -> "off",
+                    'placeholder -> "First Name - Required",
+                    '_label -> null
+                )
+            </div>
+            <div class="field-wrap">
+                <h4>Last Name</h4>
+                @helper.inputText(userForm("lastName"),
+                    'id -> "lastName",
+                    'class -> "required",
+                    'autocomplete -> "off",
+                    'placeholder -> "Last Name - Required",
+                    '_label -> null
+                )
+            </div>
+            <div class="field-wrap">
+                <h4>Email</h4>
+                @helper.inputText(userForm("email"),
+                    'id -> "lastName",
+                    'class -> "required",
+                    'autocomplete -> "off",
+                    'placeholder -> "Email - Required",
+                    '_label -> null
+                )
+            </div>
+            <div class="field-wrap">
+                <h4>Account Role</h4>
+                <select class="select form-control " id="sel1">
+                @if(user.getAccountRole.equals("USER")) {
+                    <option>USER</option>
+                    <option>ADMIN</option>
+                } else {
+                    <option>ADMIN</option>
+                    <option>USER</option>
+                }
+                </select>
+            </div>
+            <div class="row">
+                <button type="submit" class="button button-block" />
+                Save Changes!
+                <button id="buttonReset" type="reset" class="button button-block" />
+                RESET
+            </div>
+        </div>
+}
+}

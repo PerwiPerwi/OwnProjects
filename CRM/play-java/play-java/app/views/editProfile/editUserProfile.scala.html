@@ -1,0 +1,83 @@
+@(user: User)(userForm: Form[User])
+    @main("Edit Profile") {
+        <div class="form">
+            <h1 class="formHeader">
+                Hi
+                @user.getFirstName @user.getLastName
+                !
+            </h1>
+            <h3 class="editProfile">Edit Profile</h3>
+            <hr>
+            <div class="row">
+                    <!-- left column -->
+                <div class="col-md-3">
+                    <div class="text-center">
+                        <img name="profilPicture" width="150px" height="150px"
+                        src="@routes.Assets.versioned("images/profilePictures/")@user.getProfilPicture"
+                        class="avatar img-circle" alt="avatar"> <a
+                    class="changePhoto" href="@routes.PictureUploadController.updatePictureForm()">Change Photo </a>
+                    </div>
+                </div>
+                @helper.form(action = routes.EditUserProfileController.editUserProfile()) {
+                    <div class=" col-md-9 personal-info">
+                        <div class="field-wrap">
+                            <h4>Name</h4>
+                            @helper.inputText(userForm("name"),
+                                'id -> "name",
+                                'class -> "required",
+                                'autocomplete -> "off",
+                                'placeholder -> "Name - Required",
+                                '_label -> null
+                            )
+                        </div>
+                        <div class="field-wrap">
+                            <h4>First Name</h4>
+                            @helper.inputText(userForm("firstName"),
+                                'id -> "firstName",
+                                'class -> "required",
+                                'autocomplete -> "off",
+                                'placeholder -> "First Name - Required",
+                                '_label -> null
+                            )
+                        </div>
+                        <div class="field-wrap">
+                            <h4>Last Name</h4>
+                            @helper.inputText(userForm("lastName"),
+                                'id -> "lastName",
+                                'class -> "required",
+                                'autocomplete -> "off",
+                                'placeholder -> "Last Name - Required",
+                                '_label -> null
+                            )
+                        </div>
+                        <div class="field-wrap">
+                            <h4>Email</h4>
+                            @helper.inputText(userForm("email"),
+                                'id -> "email",
+                                'autocomplete -> "off",
+                                'class -> "required",
+                                'placeholder -> "Email - Required",
+                                '_label -> null,
+                                'type -> "email"
+                            )
+                        </div>
+                        <div class="field-wrap lastInput">
+                            <h4>Password</h4>
+                            <input class="required" id="password" placeholder="Password - Required"
+                            name="password" type="password" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button id="buttonSubmit" type="submit" class="button button-block" />
+                        SAVE CHANGES
+                        <button id="buttonReset" type="reset" class="button button-block" />
+                        RESET
+                    </div>
+                    <h3 class="delete">
+                        <a id="buttonDelete" class="deleteUser deleteAcc" href="@routes.EditUserProfileController.deleteUserAccountByUser(user.getId)">DELETE
+                            ACCOUNT</a>
+                    </h3>
+                }
+            </div>
+        </div>
+    }

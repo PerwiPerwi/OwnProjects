@@ -1,0 +1,18 @@
+@(errorList: List[String])
+    @loginAndSignup("Oops! Something Is Wrong!") {
+        <div class="container">
+            <div class="row class col-md-12">
+                <h1 class="errorHeader">Oops, is problem with: </h1>
+                @for(error <- errorList) {
+                    <h2 class="errors">@error</h2>
+                }
+                @if(session.get("userId") == null) {
+                    <h1 class="signupHeader"><a href="@routes.SignupController.signupForm()" class="signupForm">
+                        Try to Signup Again!</a> </h1>
+                } else {
+                    <h1 class="signupHeader"><a href="@routes.HomepageController.homepage()" class="signupForm">
+                        Try Again!</a> </h1>
+                }
+            </div>
+        </div>
+    }

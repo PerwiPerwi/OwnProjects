@@ -1,0 +1,36 @@
+.errorHeader{
+    text-align: center;
+    margin-bottom: 20px;
+    color:#2a4881;
+}
+.errors{
+    text-align: center;
+    padding: 10px;
+    color:#2a4881;
+}
+.signupHeader{
+    margin-top: 100px;
+    text-align: center;
+}
+.signupForm {
+    color: white;
+    background-color: #2a4881;
+    padding: 30px;
+}
+
+.signupForm:hover {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: white;
+    text-decoration: none;
+    background-color: #3d68bb;
+
+}
+
+.signupForm:active {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: white;
+    text-decoration: none;
+    background-color: #3d68bb;
+}

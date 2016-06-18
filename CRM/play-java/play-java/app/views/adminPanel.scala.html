@@ -1,0 +1,44 @@
+@(userList: List[User])
+@main("Admin Panel") {
+    <div class="container">
+        <h1 class="mainHeaderContact">Welcome in Admin Panel!</h1>
+        @if(userList.size() == 1){
+            <h2 class="contactHeaderLink">No Users Registered</h2>
+        } else {
+            <h2 class="tableHeader">User List</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="tableLabel">
+                        <td>ID</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Email</td>
+                        <td>Account Role</td>
+                        <td>Registration Date</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+
+                    </tr>
+                </thead>
+                <tbody>
+                @for(user <- userList) {
+                    @if(user.getId != Long.parseLong(session.get("userId"))) {
+                        <tr>
+                            <td>@user.getId</td>
+                            <td>@user.getFirstName</td>
+                            <td>@user.getLastName</td>
+                            <td>@user.getEmail</td>
+                            <td>@user.getAccountRole</td>
+                            <td>@user.getRegistrationDate.format("dd/MM/yyyy")</td>
+                            <td><a href="@routes.AdminPanelController.editUserByAdminForm(user.getId)" class="contactActions">
+                                Edit</a></td>
+                            <td><a href="@routes.AdminPanelController.deleteUserByAdmin(user.getId)" class="deleteUser contactActions">
+                                Delete</a></td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        }
+    </div>
+}

@@ -1,0 +1,24 @@
+.row {
+    margin: 0px;
+    padding: 0px;
+}
+
+.home {
+    color: #2a4881;
+    text-align: center;
+}
+
+.homePagePicture {
+    text-align: center;
+    width: 250px;
+    height: 800px;
+}
+
+h1{
+    text-align: center;
+    color: #2a4881;
+}
+.home{
+    margin-top: 150px;
+}
+
