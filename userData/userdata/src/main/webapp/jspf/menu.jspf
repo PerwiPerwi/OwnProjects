@@ -1,6 +1,8 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
-<link href="../resources/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="../resources/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">     
+<link href="<c:url value="/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
+<link href="<c:url value="/bootstrap/css/style.css"/>" rel="stylesheet">
+
 </head>
 <nav class="navbar navbar-default">
   <div class="container-fluid">
@@ -9,7 +11,7 @@
     </div>
     <ul class="nav navbar-nav">
    		 <li><a href="users.html">Userzy</a></li>
-      <li><a href="adduser.html">Dodawanie Usera</a></li>
+      <li><a href="addUser.html">Dodawanie Usera</a></li>
     </ul>
   </div>
 </nav>
