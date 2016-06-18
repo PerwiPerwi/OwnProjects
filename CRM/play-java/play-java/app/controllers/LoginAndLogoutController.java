@@ -8,14 +8,14 @@ import views.html.login;
 
 import java.util.Map;
 
-/**
- * Created by RENT on 2016-06-15.
- */
 public class LoginAndLogoutController extends Controller {
 
 
     public Result loginForm() {
-        return ok(login.render());
+        if (session().get("userId") != null) {
+            return redirect(routes.HomepageController.homepage());
+        }
+        return ok(login.render(null));
     }
 
     public Result login() {
@@ -34,7 +34,7 @@ public class LoginAndLogoutController extends Controller {
 
             return redirect(routes.HomepageController.homepage());
         } else {
-            return redirect(routes.LoginAndLogoutController.loginForm());
+            return ok(login.render("Wrong Name or Password"));
         }
     }
 

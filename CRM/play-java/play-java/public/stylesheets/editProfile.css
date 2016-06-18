@@ -82,7 +82,7 @@ dl {
 .btn-file {
     position: relative;
     overflow: hidden;
-    background-color: #77DD77;
+    background-color: #38cd38;
     margin-top: 20px;
     border: 0;
     outline: none;
@@ -95,7 +95,7 @@ dl {
     color: #ffffff;
 }
 .btn-file:hover {
-    background-color: #38cd38;
+    background-color: #77DD77;
     transition: all 0.5s ease;
     color: white;
 
@@ -125,4 +125,19 @@ dl {
     color: black;
     border-radius: 10px;
     border: 4px solid #fd7d7d;
+}
+.updateGroup{
+margin: 0;
+}
+.tab-group li a {
+    margin-top: 20px;
+    background-color: #38cd38;
+    color: white;
+}
+.tab-group li a:hover{
+    transition: all 0.5s ease;
+    color: white;
+    background-color: #77DD77;
+    transition: all 0.5s ease;
+    color: white;
 }

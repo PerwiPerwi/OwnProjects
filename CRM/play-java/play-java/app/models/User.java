@@ -1,11 +1,12 @@
 package models;
 
 import com.avaje.ebean.Model;
-import java.util.Date;
 import play.data.format.Formats;
 import play.data.validation.Constraints;
+
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -18,19 +19,19 @@ public class User extends Model {
 
     @Column(nullable = false, unique = true)
     @Constraints.Required(message = "This is field required")
-    @Pattern(regexp="^[a-zA-Z0-9._-]{3,}$",
+    @Pattern(regexp = "^[a-zA-Z0-9._-]{3,}$",
             message = "Wrong Name")
     private String name;
 
     @Column(nullable = false)
     @Constraints.Required(message = "This is field required")
-    @Pattern(regexp="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšśžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŚŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+",
+    @Pattern(regexp = "^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšśžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŚŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+",
             message = "Wrong First Name")
     private String firstName;
 
     @Column(nullable = false)
     @Constraints.Required(message = "This is field required")
-    @Pattern(regexp="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšśžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŚŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+",
+    @Pattern(regexp = "^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšśžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŚŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+",
             message = "Wrong Last Name")
     private String lastName;
 
@@ -42,15 +43,16 @@ public class User extends Model {
     private String accountRole = "USER";
 
     @Constraints.Required(message = "This is field required")
-    @Pattern(regexp="^[A-Za-z0-9+_.-]+@(.+)$"
-            ,message = "Wrong Adres Email")
+
+    @Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$"
+            , message = "Wrong Adres Email")
     @Column(nullable = false, unique = true)
     private String email;
 
     @Column(columnDefinition = "varchar default 'defaultPicture.png'")
     private String profilPicture = "defaultPicture.png";
 
-    @OneToMany(mappedBy = "user", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Contact> contactList;
 
     @Formats.DateTime(pattern = "dd/MM/yyyy")
@@ -135,6 +137,21 @@ public class User extends Model {
 
     public void setRegistrationDate(Date registrationDate) {
         this.registrationDate = registrationDate;
+    }
+
+    public String toString() {
+        return "User{" +
+                "accountRole='" + accountRole + '\'' +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", profilPicture='" + profilPicture + '\'' +
+                ", contactList=" + contactList +
+                ", registrationDate=" + registrationDate +
+                '}';
     }
 
 

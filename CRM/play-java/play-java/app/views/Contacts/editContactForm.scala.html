@@ -2,6 +2,7 @@
     @main("Edit Contact") {
         @helper.form(action = routes.ContactsController.editContact(contactForm.get().getId)) {
             <div class="form">
+                <input type="hidden" value="@contactForm.get().getId" name="id">
                 <h1 class="formHeader">Edit Contact!</h1>
                 <div class="field-wrap">
                     <h4>Name</h4>
@@ -83,6 +84,9 @@
                     <button id="buttonReset" type="reset" class="button button-block" />
                     RESET
                 </div>
+                <h3 class="delete">
+                    <a id="buttonDelete" href="@routes.ContactsController.getContacts">BACK</a>
+                </h3>
             </div>
         }
 

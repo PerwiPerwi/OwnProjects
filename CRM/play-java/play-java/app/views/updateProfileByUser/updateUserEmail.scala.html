@@ -1,0 +1,44 @@
+@(user: User)(userForm: Form[User])(message:String)
+@main("Edit Profile") {
+    <div class="form">
+        <h1 class="formHeader">
+            Hi
+            @user.getName
+            !
+        </h1>
+        @if(message!= null){
+            <h3 class="editProfile">@message</h3>
+        } else {
+            <h3 class="editProfile">Edit Email</h3>
+        }
+        <div class="row">
+        @helper.form(action = routes.EditUserProfileController.updateUserEmailByUser()) {
+            <div class=" col-md-12 personal-info">
+                <input type="hidden" name="id" value="@user.getId"/>
+                    <div class="field-wrap lastInput">
+                        <h4>Email</h4>
+                        @helper.inputText(userForm("email"),
+                            'id -> "email",
+                            'autocomplete -> "off",
+                            'class -> "required",
+                            'placeholder -> "Email - Required",
+                            '_label -> null,
+                            'type -> "email"
+                        )
+                    </div>
+                <div class="row">
+                    <button id="buttonSubmit" type="submit" class="button button-block" />
+                    SAVE CHANGES
+                    <button id="buttonReset" type="reset" class="button button-block" />
+                    RESET
+                </div>
+                <h3 class="delete">
+                    <a id="buttonDelete"href="@routes.EditUserProfileController.editUserProfileForm()">BACK</a>
+                </h3>
+            </div>
+        }
+        </div>
+    </div>
+}
+
+

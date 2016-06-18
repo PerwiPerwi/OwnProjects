@@ -2,9 +2,6 @@ package dao;
 
 import exception.NoSuchDbException;
 
-/**
- * Created by RENT on 2016-06-15.
- */
 public abstract class DAOFactory {
 
     private static final int POSTGRESQL_DAO_FACTORY = 1;

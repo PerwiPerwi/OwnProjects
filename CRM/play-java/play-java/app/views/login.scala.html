@@ -1,3 +1,4 @@
+@(message: String)
 @loginAndSignup("Login") {
     <div class="form">
         <h1 class="formHeader">CRM</h1>
@@ -8,7 +9,9 @@
 
         <div class="tab-content">
                 <h1 class="formHeader">Welcome Back!</h1>
-
+            @if(message != null){
+                <h2 class="formHeader">@message</h2>
+            }
                 <form action="@routes.LoginAndLogoutController.login()" method="post">
                     <div class="field-wrap">
                         <h4>Name</h4>

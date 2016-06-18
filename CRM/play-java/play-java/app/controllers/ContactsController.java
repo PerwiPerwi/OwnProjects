@@ -13,7 +13,6 @@ import views.html.Contacts.addContactForm;
 import views.html.Contacts.contactList;
 import views.html.Contacts.editContactForm;
 
-
 import javax.inject.Inject;
 import java.util.List;
 
@@ -108,7 +107,7 @@ public class ContactsController extends Controller {
         if (SeciurityController.getUser() == null) {
             return redirect(routes.LoginAndLogoutController.loginForm());
         }
-        if(contactService.deleteContactById(contactId)){
+        if (contactService.deleteContactById(contactId)) {
             return redirect(routes.ContactsController.getContacts());
         }
         return badRequest();

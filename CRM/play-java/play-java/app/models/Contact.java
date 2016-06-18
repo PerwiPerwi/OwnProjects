@@ -8,10 +8,6 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.Pattern;
 import java.util.Date;
-
-/**
- * Created by pawel on 09.06.2016.
- */
 @Entity
 public class Contact extends Model {
 

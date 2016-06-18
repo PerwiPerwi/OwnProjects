@@ -1,18 +1,12 @@
 package dao;
 
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Finder;
 import models.Contact;
 import models.ContactData;
 
 import java.util.List;
 
-/**
- * Created by RENT on 2016-06-13.
- */
 public class ContactDAOImpl implements ContactDAO {
-
-    public Finder<Long, Contact> contactFinder = new Finder<Long, Contact>(Contact.class);
 
     @Override
     public List<Contact> findContactListByUserId(long userId) {
@@ -46,7 +40,8 @@ public class ContactDAOImpl implements ContactDAO {
     }
 
     @Override
-    public void update(Contact contact) {
-        Ebean.update(contact);
+    public void update(Contact contactForUpdate, Contact contact) {
+
     }
+
 }

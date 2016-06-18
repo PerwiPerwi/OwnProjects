@@ -1,16 +1,12 @@
 package models;
 
 import com.avaje.ebean.Model;
-import play.data.validation.Constraints;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.Pattern;
 
-/**
- * Created by pawel on 09.06.2016.
- */
 @Entity
 public class ContactData extends Model {
 

@@ -1,5 +1,5 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <a href="@routes.HomepageController.homepage()" class="navbar-brand">CRM</a>
+    <a href="@routes.HomepageController.homepage()" class="navbar-brand">CRM - @session.get("username") </a>
 
     <button class="navbar-toggle" data-toggle="collapse"
     data-target=".navHeaderCollapse">
@@ -10,7 +10,7 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a href="@routes.HomepageController.homepage()">Home Page</a></li>
             @if(session.get("userId")!= null) {
-                <li><a href="@routes.ContactsController.getContacts">Contacts</a></li>
+                <li><a href="@routes.ContactsController.getContacts">Contact List</a></li>
                 <li><a href="@routes.ContactsController.addContactForm()">Add new Contact</a></li>
                 <li><a href="@routes.EditUserProfileController.editUserProfileForm()">Edit Account</a></li>
             }

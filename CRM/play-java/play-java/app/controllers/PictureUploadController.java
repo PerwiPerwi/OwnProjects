@@ -1,34 +1,32 @@
 package controllers;
 
+import models.User;
 import play.Play;
 import play.mvc.Controller;
 import play.mvc.Http;
 import play.mvc.Result;
 import play.mvc.Security;
-import views.html.editProfile.updateUserProfilePicture;
-import models.User;
+import services.UserService;
 
 import java.io.File;
 
-/**
- * Created by RENT on 2016-06-16.
- */
-public class PictureUploadController extends Controller{
+public class PictureUploadController extends Controller {
 
     @Security.Authenticated(SeciurityController.class)
-    public Result updatePictureForm(){
+    public Result updatePictureForm() {
         User user = SeciurityController.getUser();
-        if(user == null){
+        if (user == null) {
             return redirect(routes.LoginAndLogoutController.loginForm());
         }
-        return ok(updateUserProfilePicture.render(user));
+        return ok(views.html.updateProfileByUser.updateProfilePicture.render(user));
     }
+
     @Security.Authenticated(SeciurityController.class)
     public Result uploadUserPicture() {
+        UserService userService = new UserService();
         Http.MultipartFormData<File> body = request().body().asMultipartFormData();
         Http.MultipartFormData.FilePart<File> picture = body.getFile("picture");
         if (picture != null) {
-            User user = SeciurityController.getUser();
             String fileName = picture.getFilename();
             String contentType = picture.getContentType();
             File file = picture.getFile();
@@ -37,11 +35,28 @@ public class PictureUploadController extends Controller{
             String myUploadPath = Play.application().configuration().getString("myUploadPath");
             String path = root.getPath() + myUploadPath;
             file.renameTo(new File(path, fileName));
-            user.setProfilPicture(fileName);
-            return ok();
+            User userForUpdate = SeciurityController.getUser();
+            userService.updateProfilePicture(userForUpdate, fileName);
+            return redirect(routes.PictureUploadController.updatePictureForm());
         } else {
-            flash("error", "Missing file");
-            return badRequest();
+            return redirect(routes.EditUserProfileController.editUserProfileForm());
         }
     }
+
+    @Security.Authenticated(SeciurityController.class)
+    public Result deletePictureByUser() {
+        UserService userService = new UserService();
+        User userForUpdate = SeciurityController.getUser();
+        userService.setDefaultProfilePicture(userForUpdate);
+        return redirect(routes.PictureUploadController.updatePictureForm());
+    }
+
+    @Security.Authenticated(SeciurityController.class)
+    public Result deletePictureByAdmin(long userId) {
+        UserService userService = new UserService();
+        User userForUpdate = userService.findById(userId);
+        userService.setDefaultProfilePicture(userForUpdate);
+        return redirect(routes.AdminPanelController.editUserByAdminForm(userForUpdate.getId()));
+    }
 }
+
