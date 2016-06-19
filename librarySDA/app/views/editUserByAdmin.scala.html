@@ -1,0 +1,75 @@
+@import views.html.helper
+@import views.html.helper.options
+@(userForm: Form[User])(message: String)
+@main("Edit Contact") {
+    @helper.form(action = routes.AdminPanelController.editUserByAdmin()) {
+        <div class="container">
+            <div class="row centered-form">
+                <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Edit user profile</h3>
+                            @if(message != null) {
+                                <h2 class="panel-title">@message</h2>
+                            }
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <input type="hidden" name="id" id="id" value="@userForm.get().getId">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                    @helper.inputText(userForm("firstName"),
+                                        'id -> "firstName",
+                                        'class -> "form-control input-sm",
+                                        'autocomplete -> "off",
+                                        'placeholder -> "First Name - Required",
+                                        '_label -> "First Name"
+                                    )                                        </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                    @helper.inputText(userForm("lastName"),
+                                        'id -> "lastName",
+                                        'class -> "form-control input-sm",
+                                        'autocomplete -> "off",
+                                        'placeholder -> "Last Name - Required",
+                                        '_label -> "Last Name"
+                                    )
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                            @helper.inputText(userForm("email"),
+                                'id -> "email",
+                                'class -> "form-control input-sm",
+                                'autocomplete -> "off",
+                                'placeholder -> "Email - Required",
+                                '_label -> "Email"
+                            )                                </div>
+
+                            <div class="form-group">
+                            @if("ADMIN".equals(userForm.get().getAccountRole)) {
+                                @helper.select(field = userForm("accountRole"),
+                                    options = options(Seq("ADMIN", "USER")),
+                                    'class -> "form-control input-sm",
+                                    '_label -> "Account Role"
+                                )
+                            } else {
+                                @helper.select(field = userForm("accountRole"),
+                                    options = options(Seq("USER", "ADMIN")),
+                                    'class -> "form-control input-sm",
+                                    '_label -> "Account Role")
+                            }
+                            </div>
+
+                            <input type="submit" value="Update User" class="btn btn-info btn-block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+

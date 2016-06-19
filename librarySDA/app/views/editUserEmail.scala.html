@@ -1,0 +1,35 @@
+@(userForm: Form[User])(message: String)
+@main("Change Password") {
+    <div class="container">
+        <div class="row centered-form">
+            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Hello @userForm.get().getFirstName @userForm.get().getLastName!</h3>
+                        <h4>Edit Email</h4>
+                        @if(message != null) {
+                            <h3>@message</h3>
+                        }
+                    </div>
+                    <div class="panel-body">
+                    @helper.form(action = routes.EditUserProfileController.editUserEmail()) {
+                        <input type="hidden" name="id" id="id" value="@userForm.get().getId">
+                        <input type="hidden" name="firstName" id="id" value="@userForm.get().getFirstName">
+                        <input type="hidden" name="lastName" id="id" value="@userForm.get().getLastName">
+                        <input type="hidden" name="password" id="id" value="@userForm.get().getPassword">
+                        <div class="form-group">
+                        @helper.inputText(userForm("email"),
+                            'id -> "email",
+                            'class -> "form-control input-sm",
+                            'autocomplete -> "off",
+                            'placeholder -> "Email - Required",
+                            '_label -> "Email"
+                        )                                </div>
+                        <input type="submit" value="Change Email" class="btn btn-info btn-block">
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

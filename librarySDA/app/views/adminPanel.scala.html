@@ -1,0 +1,41 @@
+@(userList: List[User])
+@main("Admin Panel") {
+
+    <div class="container">
+        <h1 class="adminHeader">Welcome in Admin Panel!</h1>
+        <h2 class="adminHeader">User List</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Email</td>
+                    <td>Account Status</td>
+                    <td>Account Role</td>
+                    <td>Registration Date</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+
+                </tr>
+            </thead>
+            <tbody>
+            @for(user <- userList) {
+                @if(user.getId != Long.parseLong(session.get("userId"))) {
+                    <tr>
+                        <td>@user.getId</td>
+                        <td>@user.getFirstName</td>
+                        <td>@user.getLastName</td>
+                        <td>@user.getEmail</td>
+                        <td>@user.getAccountStatus</td>
+                        <td>@user.getAccountRole</td>
+                        <td>@user.getRegistrationDate</td>
+                        <td><a href="@routes.AdminPanelController.editUserByAdminForm(user.getId)">Edit</a></td>
+                        <td><a href="@routes.AdminPanelController.deleteUserByAdmin(user.getId)">Delete</a></td>
+                    </tr>
+                }
+            }
+            </tbody>
+        </table>
+    </div>
+}

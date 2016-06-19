@@ -1,0 +1,52 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET         /                                         controllers.Application.index
+GET         /signup                                   controllers.SignupController.signupForm
+POST        /signup                                   controllers.SignupController.signupController()
+GET         /editUserProfile                          controllers.EditUserProfileController.editUserProfileForm
+GET         /editUserProfile/editmail                 controllers.EditUserProfileController.editUserEmailForm
+POST        /editUserProfile/editmail                 controllers.EditUserProfileController.editUserEmail()
+GET         /editUserProfile/editpassword             controllers.EditUserProfileController.editUserPasswordForm
+POST        /editUserProfile/editpassword             controllers.EditUserProfileController.editUserPassword
+POST        /editUserProfile                          controllers.EditUserProfileController.editUserProfile()
+GET         /logout                                   controllers.LogoutController.logout()
+
+POST        /login                                    controllers.LoginController.login()
+GET         /login                                    controllers.LoginController.loginForm
+GET         /booklist                                 controllers.BooksController.bookList
+GET         /availablebooks                           controllers.BooksController.availableBooks
+GET         /top10                                    controllers.BooksController.topBooks
+GET         /hotnew                                   controllers.BooksController.hotNew
+GET         /about                                    controllers.AboutController.about
+
+# Admin panel
+GET         /dashboard                                controllers.RentController.getAllUserRents()
+GET         /dashboard/book/add                       controllers.BooksController.addBook()
+POST        /dashboard/book                           controllers.BooksController.saveBook()
+GET         /admin                                    controllers.AdminPanelController.adminPanel
+GET         /adminpanel/edit/:userId                  controllers.AdminPanelController.editUserByAdminForm(userId: Long)
+POST        /adminpanel/edit                          controllers.AdminPanelController.editUserByAdmin()
+GET         /adminpanel/delete/:userId                controllers.AdminPanelController.deleteUserByAdmin(userId: Long)
+
+#Book
+GET         /:bookId                                  controllers.BooksController.bookView(bookId: Long)
+GET         /dashboard/booklist/edit/:bookId          controllers.BooksController.editBookForm(bookId: Long)
+POST        /dashboard/booklist/edit                  controllers.BooksController.editBook()
+GET         /dashboard/booklist/delete/:bookId        controllers.BooksController.deleteBook(bookId: Long)
+GET         /dashboard/booklist                       controllers.BooksController.bookListDashboard()
+
+#Rent Book
+GET         /rent/:bookId                             controllers.RentController.rentBook(bookId: Long)
+#Dashboard
+GET         /dashboard/adminpanel                     controllers.DashboardController.adminPanel()
+
+# An example controller showing how to use dependency injection
+#GET     /count                      controllers.CountController.count
+# An example controller showing how to write asynchronous code
+#GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                             controllers.Assets.versioned(path="/public", file: Asset)

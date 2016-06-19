@@ -1,0 +1,55 @@
+<header>
+    <div class="header">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="@routes.Application.index()">Library</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="@routes.BooksController.bookList()">Books list</a></li>
+                    <li><a href="@routes.BooksController.availableBooks()">Available Books List</a></li>
+                    <li><a href="@routes.BooksController.topBooks()">TOP 10</a></li>
+                    <li><a href="@routes.BooksController.hotNew()">Hot new!</a></li>
+                    <li><a href="@routes.AboutController.about()">About Us</a></li>
+                    @if(session.get("userId") != null) {
+                        <li><a href="@routes.EditUserProfileController.editUserProfileForm()">Edit Profile</a></li>
+                    }
+                </ul>
+                <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+                    <ul class="nav navbar-nav pull-right">
+                        @if((session.get("userId") != null) && (session.get("userRole").equalsIgnoreCase("ADMIN"))){
+                         <li><a href="@routes.AdminPanelController.adminPanel()">Admin Panel</a></li>
+                        }
+                        @if(session.get("userId") == null) {
+                            <li><a href="@routes.LoginController.loginForm()">Login</a></li>
+                            <li><a href="@routes.SignupController.signupForm()">Sign up!</a></li>
+                        } else {
+                            <li><a href="@routes.LogoutController.logout()">Logout</a></li>
+                        }
+                    </ul>
+                    @if(session.get("userId") != null) {
+                        <div class="nickname-info btn-group pull-right acc-button">
+                            <button type="button" class="btn btn-default">@session.get("username")</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@routes.RentController.getAllUserRents()">Dashboard</a></li>
+                                <li><a href="#">Add book</a></li>
+                                <li><a href="#">Book list</a></li>
+                                <li><a href="#">Users list</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,21 @@
+@(booksList: List[Book])
+
+@main("Books List") {
+
+    <div class="container">
+        <div class="row">
+            <div class="center-block">
+                <h2>Books list</h2>
+                <div class="list-group">
+                @for(book <- booksList) {
+                    <a href="@book.getId" class="list-group-item">
+                        <h4 class="list-group-item-heading">@book.getTitle</h4>
+                        <p class="list-group-item-text">@book.getAuthor</p>
+                    </a>
+                }
+                </div>
+            </div>
+        </div>
+    </div>
+
+}

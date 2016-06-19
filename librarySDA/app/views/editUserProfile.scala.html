@@ -1,0 +1,52 @@
+@(userForm: Form[User])
+@main("Edit Contact") {
+    @helper.form(action = routes.EditUserProfileController.editUserProfile()) {
+        <div class="container">
+            <div class="row centered-form">
+                <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Edit user profile</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <input type="hidden" name="id" id="id" value="@userForm.get().getId"/>
+                                <input type="hidden" name="password" id="password" value="@userForm.get().getPassword"/>
+                                <input type="hidden" name="email" id="email" value="@userForm.get().getEmail"/>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                    @helper.inputText(userForm("firstName"),
+                                        'id -> "firstName",
+                                        'class -> "form-control input-sm",
+                                        'autocomplete -> "off",
+                                        'placeholder -> "First Name - Required",
+                                        '_label -> "First Name"
+                                    )                                        </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <div class="form-group">
+                                    @helper.inputText(userForm("lastName"),
+                                        'id -> "lastName",
+                                        'class -> "form-control input-sm",
+                                        'autocomplete -> "off",
+                                        'placeholder -> "Last Name - Required",
+                                        '_label -> "Last Name"
+                                    )
+                                    </div>
+                                    <div>
+                                        <ul class="updateGroup tab-group">
+                                            <li class="tab"><a href="@routes.EditUserProfileController.editUserPasswordForm()" class="update">Edit Password</a></li>
+                                            <li class="tab"><a href="@routes.EditUserProfileController.editUserEmailForm()" class="update">Edit Email</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" value="Update User" class="btn btn-info btn-block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+

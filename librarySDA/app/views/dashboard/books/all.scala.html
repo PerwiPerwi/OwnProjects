@@ -1,0 +1,32 @@
+@(bookList: List[Book])
+@dashboard.main("Book List") {
+
+    <div class="container">
+        <h2 class="adminHeader">Book List</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Description</td>
+                    <td>Edit</td>
+                    <td>Delete</td>
+
+                </tr>
+            </thead>
+            <tbody>
+            @for(book <- bookList) {
+                    <tr>
+                        <td>@book.getId</td>
+                        <td>@book.getTitle</td>
+                        <td>@book.getAuthor</td>
+                        <td>@book.getDescription</td>
+                        <td><a href="@routes.BooksController.editBookForm(book.getId)">Edit</a></td>
+                        <td><a href="@routes.BooksController.deleteBook(book.getId)">Delete</a></td>
+                    </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}

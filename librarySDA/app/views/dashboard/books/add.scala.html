@@ -1,0 +1,29 @@
+@(addBookForm: Form[Book])
+
+@import helper._
+
+@implicitFieldConstructor = @{ FieldConstructor(twitterBootstrapInput.render) }
+
+@dashboard.main("Add new book") {
+
+    <h1>Add a new Book</h1>
+
+    @form(routes.BooksController.saveBook()) {
+
+        <fieldset>
+
+            @inputText(addBookForm("title"), '_label -> "Book title")
+            @inputText(addBookForm("author"), '_label -> "Author name")
+            @inputText(addBookForm("description"), '_label -> "Book description")
+
+
+        </fieldset>
+
+        <div class="actions">
+            <input type="submit" value="Create this book" class="btn primary"> or
+            <a href="@routes.RentController.getAllUserRents()" class="btn">Cancel</a>
+        </div>
+
+    }
+
+}

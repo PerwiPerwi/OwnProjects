@@ -1,0 +1,8 @@
+@(errorList: List[String])
+<div>
+  <ul>
+    @for(error <- errorList) {
+      <li>@error</li>
+    }
+  </ul>
+</div>

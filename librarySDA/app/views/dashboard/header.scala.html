@@ -1,0 +1,35 @@
+<header>
+    <div class="header">
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="@routes.Application.index()">Library</a>
+                </div>
+                <div class="collapse navbar-collapse" id="js-navbar-collapse">
+                    @if(session.get("userId") != null) {
+                        <div class="nickname-info btn-group pull-right acc-button">
+                            <button type="button" class="btn btn-default">@session.get("username")</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="@routes.EditUserProfileController.editUserProfileForm()">Profile</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@routes.RentController.getAllUserRents()">Dashboard</a></li>
+                                @if((session.get("userId") != null) && (session.get("userRole").equalsIgnoreCase("ADMIN"))) {
+                                    <li><a href="@routes.AdminPanelController.adminPanel()">Admin Panel</a></li>
+                                }
+                                <li><a href="@routes.BooksController.addBook()">Add book</a></li>
+                                <li><a href="@routes.BooksController.bookListDashboard()">Book list</a></li>
+                                <li class="divider"></li>
+                                <li><a href="@routes.LogoutController.logout()">Logout</a></li>
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
