@@ -1,0 +1,36 @@
+@(message: String)
+    @loginAndSignup("Login") {
+        <div class="form">
+            <h1 class="formHeader">CRM</h1>
+            <ul class="tab-group">
+                <li class="tab active"><a href="@routes.LoginAndLogoutController.loginForm()">Log In</a></li>
+                <li class="tab"><a href="@routes.SignupController.signupForm()">Sign Up</a></li>
+            </ul>
+            <div class="tab-content">
+                <h1 class="formHeader">Welcome Back!</h1>
+                @if(message != null) {
+                    <h2 class="formHeader">@message</h2>
+                }
+                <form action="@routes.LoginAndLogoutController.login()" method="post">
+                    <div class="field-wrap">
+                        <h4>Name</h4>
+                        <input name="name" type="text" placeholder="Name">
+                    </div>
+
+                    <div class="field-wrap">
+                        <h4>Password</h4>
+                        <input name="password" type="password" placeholder="Password">
+                    </div>
+
+                    <button type="submit" class="button button-block" />
+                    Log In
+                </form>
+            </div>
+            <div class="row facebook">
+                <a href="@routes.LoginAndLogoutController.loginByFacebook()">
+                    <img id="facebookButton"
+                    src="@routes.Assets.versioned("images/facebookButton.png")"></a>
+            </div>
+        </div>
+
+    }

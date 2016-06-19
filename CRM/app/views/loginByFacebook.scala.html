@@ -1,0 +1,50 @@
+<div id="fb-root">
+
+    </div>
+<script>
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '1790135667883753',
+                    xfbml: true,
+                    version: 'v2.6'
+                }) ;
+
+                FB.getLoginStatus(function (response) {
+                    if (response.status === 'connected') {
+                        var uid = response.authResponse.userID ;
+                        var accessToken = response.authResponse.accessToken ;
+                        window.location.href = '/loginbyfacebook/' + accessToken ;
+                    } else if (response.status === 'not_authorized') {
+                        FB.login(function (response) {
+                            if (response.authResponse) {
+                                var accessToken = response.authResponse.accessToken ;
+                                window.location.href = '/loginbyfacebook/' + accessToken ;
+
+                            } else {
+                                window.location.href = '/loginbyfacebook';
+                                window.location.href = '/loginbyfacebook/' + accessToken ;
+                            }
+                        });
+                    } else {
+                        FB.login(function (response) {
+                            if (response.authResponse) {
+                                var accessToken = response.authResponse.accessToken ;;
+                                window.location.href = '/loginbyfacebook/' + accessToken ;
+                            }
+                        }) ;
+                    }
+                }) ;
+            } ;
+            ( function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0] ;
+                if (d.getElementById(id)) {
+                    return ;
+                }
+                js = d.createElement(s) ;
+                js.id = id ;
+                js.src = "//connect.facebook.net/en_US/sdk.js" ;
+                fjs.parentNode.insertBefore(js, fjs) ;
+            }(document, 'script', 'facebook-jssdk') ) ;
+    </script>
+
+

@@ -1,0 +1,96 @@
+@(contactForm: Form[Contact])(message: String)
+    @main("Edit Contact") {
+        @helper.form(action = routes.ContactsController.editContact(contactForm.get().getId)) {
+            <div class="form">
+                <input type="hidden" value="@contactForm.get().getId" name="id">
+                <h1 class="formHeader">Edit Contact!</h1>
+                @if(message != null) {
+                    <h2 class="formHeader">@message</h2>
+                }
+                <div class="field-wrap">
+                    <h4>Name</h4>
+                    @helper.inputText(contactForm("contactName"),
+                        'id -> "name",
+                        'autocomplete -> "off",
+                        'placeholder -> "Name",
+                        '_label -> null
+                    )
+                </div>
+                <div class="field-wrap">
+                    <h4>Email</h4>
+                    @helper.inputText(contactForm("contactData.email"),
+                        'id -> "email",
+                        'autocomplete -> "off",
+                        'placeholder -> "Email",
+                        '_label -> null,
+                        'type -> "email"
+                    )
+                </div>
+                <div class="field-wrap">
+                    <h4>Phone Number</h4>
+                    @helper.inputText(contactForm("contactData.phoneNumber"),
+                        'id -> "phoneNumber",
+                        'autocomplete -> "off",
+                        'placeholder -> "Phone Number",
+                        '_label -> null
+                    )
+                </div>
+
+                <div class="field-wrap">
+                    <h4>Country</h4>
+                    @helper.inputText(contactForm("contactData.country"),
+                        'id -> "country",
+                        'autocomplete -> "off",
+                        'placeholder -> "Country",
+                        '_label -> null
+                    )
+                </div>
+                <div class="field-wrap">
+                    <h4>Zip Code</h4>
+                    @helper.inputText(contactForm("contactData.zipCode"),
+                        'id -> "zipCode",
+                        'autocomplete -> "off",
+                        'placeholder -> "Zip Code",
+                        '_label -> null
+                    )
+                </div>
+                <div class="field-wrap">
+                    <h4>City</h4>
+                    @helper.inputText(contactForm("contactData.city"),
+                        'id -> "city",
+                        'autocomplete -> "off",
+                        'placeholder -> "City",
+                        '_label -> null
+                    )
+                </div>
+                <div class="field-wrap">
+                    <h4>Street</h4>
+                    @helper.inputText(contactForm("contactData.street"),
+                        'id -> "street",
+                        'autocomplete -> "off",
+                        'placeholder -> "Street",
+                        '_label -> null
+                    )
+                </div>
+                <div class="field-wrap">
+                    <h4>Description</h4>
+                    @helper.inputText(contactForm("contactData.description"),
+                        'id -> "description",
+                        'autocomplete -> "off",
+                        'placeholder -> "Description",
+                        '_label -> null
+                    )
+                </div>
+                <div class="row">
+                    <button type="submit" class="button button-block" />
+                    Save Changes!
+                    <button id="buttonReset" type="reset" class="button button-block" />
+                    RESET
+                </div>
+                <h3 class="delete">
+                    <a id="buttonDelete" href="@routes.ContactsController.getContacts">BACK</a>
+                </h3>
+            </div>
+        }
+
+    }
