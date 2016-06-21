@@ -1,0 +1,143 @@
+button {
+    margin-bottom: 10px;
+}
+
+.form {
+    max-width: 800px;
+    margin-bottom: 200px;
+
+}
+
+a {
+    color: white;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.delete {
+    margin-top: 10px;
+    text-align: center;
+    background-color: orange;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.delete:HOVER {
+    color: white;
+    text-decoration: none;
+    background-color: #ff7519;
+    transition: all 0.5s ease;
+}
+
+.delete:active {
+    color: white;
+    text-decoration: none;
+}
+
+.editProfile {
+    text-align: center;
+    color: white;
+}
+
+.pictureHref {
+    text-align: center;
+    margin-right: 10px;
+}
+
+.avatar {
+    margin-bottom: 15px;
+}
+
+.changePhoto {
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.lastInput {
+    margin-bottom: 40px;
+}
+
+#pictureForUpdate {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+.inputFile {
+    color: white;
+    text-align: center;
+}
+
+dl {
+    margin: 0px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #38cd38;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #ffffff;
+}
+.btn-file:hover {
+    background-color: #77DD77;
+    transition: all 0.5s ease;
+    color: white;
+
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.select{
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    border: 1px solid #a0b3b0;
+    color: black;
+    border-radius: 10px;
+    border: 4px solid #fd7d7d;
+}
+.updateGroup{
+margin: 0;
+}
+.tab-group li a {
+    margin-top: 20px;
+    background-color: #38cd38;
+    color: white;
+}
+.tab-group li a:hover{
+    transition: all 0.5s ease;
+    color: white;
+    background-color: #77DD77;
+    transition: all 0.5s ease;
+    color: white;
+}

@@ -1,0 +1,76 @@
+@import views.html.helper._
+@(userForm: Form[User])(message: String)
+@main("Edit Contact by Admin") {
+    <div class="form">
+
+        <h1 class="formHeader">Edit Contact @userForm.get().getName!</h1>
+        @if(message!= null){
+            <h3 class="formHeader">@message!</h3>
+        }
+        <div class="col-md-8 col-md-offset-4">
+            <img name="profilPicture" width="150px" height="150px"
+            src="@routes.Assets.versioned("images/profilePictures/")@userForm.get().getProfilPicture" class="avatar img-circle" alt="avatar" style="margin-left: 20px"/>
+        </div>
+        @helper.form(action = routes.AdminPanelController.editUserByAdmin()) {
+            <h3 class="pictureHref deleteUser"><a href="@routes.PictureUploadController.deletePictureByAdmin(userForm.get().getId)" class="changePhoto">
+                Set Default Photo</a></h3>
+            <input type="hidden" name="id" value="@userForm.get().getId">
+            <input type="hidden" name="name" value="@userForm.get().getName">
+            <input type="hidden" name="password" value="@userForm.get().getPassword">
+            <div class="field-wrap">
+                <h4>First Name</h4>
+                @helper.inputText(userForm("firstName"),
+                    'id -> "firstName",
+                    'class -> "required",
+                    'autocomplete -> "off",
+                    'placeholder -> "First Name - Required",
+                    '_label -> null
+                )
+            </div>
+            <div class="field-wrap">
+                <h4>Last Name</h4>
+                @helper.inputText(userForm("lastName"),
+                    'id -> "lastName",
+                    'class -> "required",
+                    'autocomplete -> "off",
+                    'placeholder -> "Last Name - Required",
+                    '_label -> null
+                )
+            </div>
+            <div class="field-wrap">
+                <h4>Email</h4>
+                @helper.inputText(userForm("email"),
+                    'id -> "lastName",
+                    'class -> "required",
+                    'autocomplete -> "off",
+                    'placeholder -> "Email - Required",
+                    '_label -> null
+                )
+            </div>
+            <div class="field-wrap">
+            @if("ADMIN".equals(userForm.get().getAccountRole)) {
+                @helper.select(field = userForm("accountRole"),
+                    options = options(Seq("ADMIN", "USER")),
+                    'class -> "select form-control",
+                    '_label -> "Account Role"
+                    )
+            } else {
+                @helper.select(field = userForm("accountRole"),
+                    options = options(Seq("USER", "ADMIN")),
+                    'class -> "select form-control",
+                    '_label -> "Account Role")
+            }
+                </div>
+
+            <div class="row">
+                <button type="submit" class="button button-block" />
+                Save Changes!
+                <button id="buttonReset" type="reset" class="button button-block" />
+                RESET
+            </div>
+            <h3 class="delete">
+                <a id="buttonDelete" href="@routes.AdminPanelController.adminPanel()">BACK</a>
+            </h3>
+        </div>
+}
+}

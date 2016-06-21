@@ -1,0 +1,59 @@
+table {
+    color: #2a4881;
+    font-size: 20px;
+}
+
+.contactActions {
+    color: #2a4881;
+}
+
+.contactActions:hover {
+    color: #3d68bb;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.mainHeaderContact{
+    margin-bottom: 50px;
+}
+
+.contactHeaderLink {
+    margin-top: 125px;
+    text-align: center;
+    color: #2a4881;
+}
+
+.newContact {
+    color: white;
+    background-color: #2a4881;
+    padding: 30px;
+}
+
+.newContact:hover {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: white;
+    text-decoration: none;
+    background-color: #3d68bb;
+
+}
+
+.newContact:active {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: white;
+    text-decoration: none;
+    background-color: #3d68bb;
+
+}
+.tableHeader{
+    text-align: center;
+    background-color: #2a4881;
+    padding: 10px;
+}
+.tableLabel{
+    font-weight: 600;
+}
+table{
+    font-size:15px;
+}

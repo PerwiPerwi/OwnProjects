@@ -1,0 +1,26 @@
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <p class="footer-links">
+            @if(session.get("userId") != null) {
+                <a href="@routes.HomepageController.homepage()">Home Page</a>
+                <a href="@routes.ContactsController.getContacts">Contact List</a>
+                <a href="@routes.ContactsController.addContact() ">Add new Contact</a>
+                <a href="@routes.EditUserProfileController.editUserProfileForm()">Edit Account</a>
+            }
+            @if(session.get("userRole") != null && "ADMIN".equals(session.get("userRole"))) {
+                <a href="@routes.AdminPanelController.adminPanel()">Admin
+                    Panel</a>
+            }
+            @if(session.get("userId") != null) {
+                <a href="@routes.LoginAndLogoutController.logout()">Logout</a>
+            } else {
+                <a href="@routes.LoginAndLogoutController.login()">Login</a>
+            }
+        </p>
+        <p class="footer-company-name">CRM &copy; 2016</p>
+    </div>
+</footer>
+
+
+
+

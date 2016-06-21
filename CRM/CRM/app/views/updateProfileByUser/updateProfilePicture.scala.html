@@ -1,0 +1,30 @@
+@(user: User)
+@main("CRM") {
+    <div class="form">
+    @helper.form(action = routes.PictureUploadController.uploadUserPicture(), 'enctype -> "multipart/form-data") {
+        <h1 class="formHeader">Update Avatar Photo</h1>
+        <div class="row">
+            <div class="col-md-5 col-md-offset-3">
+                <div>
+                    <img id="pictureForUpdate"
+                    src="@routes.Assets.versioned("images/profilePictures/")@user.getProfilPicture"
+                    class=" picture img-circle">
+                </div>
+            </div>
+        </div>
+        <label class="btn btn-block btn-file">
+            Browse Picture <input type="file" name="picture"style="display: none;">
+        </label>
+
+        <div class="row">
+        <button type="submit" class="button button-block" />
+        SAVE CHANGES
+        </div>
+        <h3 class="delete">
+            <a class="deleteAcc deleteUser"
+            href="@routes.PictureUploadController.deletePictureByUser()">DELETE
+                PHOTO</a>
+        </h3>
+    </div>
+}
+}

@@ -1,0 +1,84 @@
+@(userForm:Form[User])(message: String)
+@loginAndSignup("Signup") {
+        <div class="form">
+            <h1 class=" formHeader">CRM</h1>
+            <ul class="tab-group">
+                <li class="tab"><a href="@routes.LoginAndLogoutController.loginForm()">Log In</a></li>
+                <li class="tab active"><a href="@routes.SignupController.signupForm()">Sign Up</a></li>
+            </ul>
+                <div class="tab-content">
+                    <h1 class="formHeader">Signup!</h1>
+                    @if(message != null){
+                        <h3 class="formHeader">@message</h3>
+                    }
+                    <form action="@routes.SignupController.signupController()" method="post">
+                            <div class="field-wrap">
+                                <h4>Name</h4>
+                                @helper.inputText(userForm("name"),
+                                    'id -> "name",
+                                    'class -> "required",
+                                    'autocomplete -> "off",
+                                    'placeholder -> "Name - Required",
+                                    '_label -> null
+                                )
+                            </div>
+                            <div class="field-wrap">
+                                <h4>First Name</h4>
+                                @helper.inputText(userForm("firstName"),
+                                    'id -> "firstName",
+                                    'class -> "required",
+                                    'autocomplete -> "off",
+                                    'placeholder -> "First Name - Required",
+                                    '_label -> null
+                                )
+                            </div>
+                            <div class="field-wrap">
+                                <h4>Last Name</h4>
+                                @helper.inputText(userForm("lastName"),
+                                    'id -> "lastName",
+                                    'class -> "required",
+                                    'autocomplete -> "off",
+                                    'placeholder -> "Last Name - Required",
+                                    '_label -> null
+                                )
+                            </div>
+                            <div class="field-wrap">
+                                <h4>Email</h4>
+                                @helper.inputText(userForm("email"),
+                                    'id -> "lastName",
+                                    'class -> "required",
+                                    'autocomplete -> "off",
+                                    'type -> "email",
+                                    'placeholder -> "Email - Required",
+                                    '_label -> null
+                                )
+                            </div>
+                        <div class="field-wrap">
+                            <h4>Password</h4>
+                            @helper.inputText(userForm("password"),
+                                'id -> "password",
+                                'class -> "required",
+                                'autocomplete -> "off",
+                                'placeholder -> "Password - Required",
+                                'type -> "password",
+                                '_label -> null
+                            )
+                        </div>
+                        <div class="field-wrap">
+                            <h4>Confirm Password</h4>
+                            @helper.inputText(userForm("confirmPassword"),
+                                'id -> "confirmPassword",
+                                'class -> "required",
+                                'name -> "confirmPassword",
+                                'autocomplete -> "off",
+                                'placeholder -> "Confirm Password - Required",
+                                'type -> "password",
+                                '_label -> null
+                            )
+                        </div>
+                        <button type="submit" class="button button-block" />
+                        Sign up!
+                    </form>
+                </div>
+            </div>
+}

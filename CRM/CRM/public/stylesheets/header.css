@@ -1,0 +1,23 @@
+.navbar{
+    position: relative;
+    background-color: #2a4881;
+    color:white;
+    border-color:#2a4881;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #cccccc;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse .navbar-brand:hover {
+    color: #cccccc;
+}
+
+

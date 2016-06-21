@@ -1,0 +1,16 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/styles.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/loginAndSignup.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/errors.css")">
+        <link rel="shortcut icon" type="image/ico" href="@routes.Assets.versioned("images/favicon.ico")">
+    </head>
+    <body>
+        @content
+    </body>
+</html>
