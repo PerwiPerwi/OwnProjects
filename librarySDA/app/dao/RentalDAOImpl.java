@@ -25,8 +25,9 @@ public class RentalDAOImpl implements RentalDAO {
     }
 
     @Override
-    public Rental getById(Long primaryKey) {
-        return null;
+    public Rental getById(Long rentalId) {
+
+        return Ebean.find(Rental.class).where().idEq(rentalId).findUnique();
     }
 
     @Override
@@ -44,17 +45,38 @@ public class RentalDAOImpl implements RentalDAO {
         Rental rental = new Rental();
         rental.setUser(user);
         rental.setBook(book);
+        book.setBookStatus("NOT_AVAILABLE");
+        book.update();
         Ebean.insert(rental);
         return rental;
     }
 
     @Override
     public Rental getRentalByUserIdAndBookID(long userId, long bookId) {
-        return Ebean.find(Rental.class).where().eq("user_id", userId).eq("book_id",bookId).findUnique();
+        return Ebean.find(Rental.class).where().eq("user_id", userId).eq("book_id", bookId).findUnique();
     }
 
     @Override
     public List<Rental> getAllRentalsByUserId(long userId) {
         return Ebean.find(Rental.class).where().eq("user_id", userId).findList();
+    }
+
+    @Override
+    public List<Rental> getAllNotReturnedRentals(long userId) {
+        return Ebean.find(Rental.class).where().eq("user_id", userId).eq("rental_status","NOT RETURNED").findList();
+    }
+
+    @Override
+    public List<Rental> getAllReturnedRentals(long userId) {
+        return Ebean.find(Rental.class).where().eq("user_id", userId).eq("rental_status","RETURNED").findList();
+    }
+
+    @Override
+    public void returnRental(Rental rental, Book book) {
+        rental.setRentalStatus("RETURNED");
+        Ebean.update(rental);
+        book.setBookStatus("AVAILABLE");
+        book.setRental(null);
+        Ebean.update(book);
     }
 }

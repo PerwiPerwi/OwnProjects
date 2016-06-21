@@ -42,15 +42,15 @@ public class User extends Model {
     @Formats.DateTime(pattern = "dd/MM/yyyy")
     private DateTime registrationDate = new DateTime();
 
-    public String getAccountRole() {
-        return accountRole;
-    }
     @OneToMany(mappedBy = "user")
     private Rental rental;
 
     @OneToMany(mappedBy = "user")
     private Penalty penalty;
 
+    public String getAccountRole() {
+        return accountRole;
+    }
     public void setAccountRole(String accountRole) {
         this.accountRole = accountRole;
     }

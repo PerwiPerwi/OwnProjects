@@ -14,4 +14,7 @@ public interface RentalDAO extends GenericDAO<Rental, Long> {
     Rental rentBook(User user, Book book);
     Rental getRentalByUserIdAndBookID(long userId, long bookId);
     List<Rental> getAllRentalsByUserId(long userId);
+    List<Rental> getAllNotReturnedRentals(long userId);
+    List<Rental> getAllReturnedRentals(long userId);
+    void returnRental(Rental rental, Book book);
 }

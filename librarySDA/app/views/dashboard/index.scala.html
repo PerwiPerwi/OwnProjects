@@ -4,29 +4,37 @@
     @dashboard.main("Dashboard") {
         <div class="container">
             <h1 class="adminHeader">Welcome in Library Dashboard!</h1>
-            <h2 class="adminHeader">Your Rentals:</h2>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <td>Title</td>
-                        <td>Author</td>
-                        <td>Description</td>
-                        <td>Loan Date</td>
-                        <td>Date for Return</td>
-                    </tr>
-                </thead>
-                <tbody>
-                @for(rentals <- rentalList) {
-                    <tr>
-                        <td>@rentals.getBook.getTitle</td>
-                        <td>@rentals.getBook.getAuthor</td>
-                        <td>@rentals.getBook.getDescription</td>
-                        <td>@dateFormatter.print(rentals.getLoanDate)</td>
-                        <td>@dateFormatter.print(rentals.getReturnDate)</td>
-                    </tr>
-                }
-                </tbody>
-            </table>
+            @if(rentalList.isEmpty){
+                <h2 class="adminHeader">You don't have any rentals</h2>
+            } else {
+                <h2 class="adminHeader">Your Rentals:</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>Title</td>
+                            <td>Author</td>
+                            <td>Description</td>
+                            <td>Loan Date</td>
+                            <td>Date for Return</td>
+                            <td>Return Book</td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @for(rentals <- rentalList) {
+                        <tr>
+                            <td>@rentals.getBook.getTitle</td>
+                            <td>@rentals.getBook.getAuthor</td>
+                            <td>@rentals.getBook.getDescription</td>
+                            <td>@rentals.getBook.getDescription</td>
+                            <td>@dateFormatter.print(rentals.getLoanDate)</td>
+                            <td>@dateFormatter.print(rentals.getReturnDate)</td>
+                            <td><a href="@routes.RentController.returnBook(rentals.getId)">Return This Book</a></td>
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            }
         </div>
     }
 }

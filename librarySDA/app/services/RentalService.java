@@ -27,4 +27,24 @@ public class RentalService {
         RentalDAO rentalDAO = factory.getRentalDAO();
         return rentalDAO.getAllRentalsByUserId(userId);
     }
+    public List<Rental> getAllReturnedUserRentalsByUserId(long userId) {
+        DAOFactory factory = DAOFactory.getDAOFactory();
+        RentalDAO rentalDAO = factory.getRentalDAO();
+        return rentalDAO.getAllReturnedRentals(userId);
+    }
+    public List<Rental> getAllNotReturnedUserRentalsByUserId(long userId) {
+        DAOFactory factory = DAOFactory.getDAOFactory();
+        RentalDAO rentalDAO = factory.getRentalDAO();
+        return rentalDAO.getAllNotReturnedRentals(userId);
+    }
+    public Rental getRentalById(long rentalId) {
+        DAOFactory factory = DAOFactory.getDAOFactory();
+        RentalDAO rentalDAO = factory.getRentalDAO();
+        return rentalDAO.getById(rentalId);
+    }
+    public void returnRental(Rental rental, Book book) {
+        DAOFactory factory = DAOFactory.getDAOFactory();
+        RentalDAO rentalDAO = factory.getRentalDAO();
+        rentalDAO.returnRental(rental, book);
+    }
 }

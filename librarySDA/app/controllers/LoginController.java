@@ -2,8 +2,6 @@ package controllers;
 
 import play.mvc.Controller;
 import play.mvc.Result;
-import dao.UserDAO;
-import dao.UserDAOImpl;
 import models.User;
 import services.UserService;
 import views.html.formLogin;
@@ -16,10 +14,16 @@ import java.util.Map;
 public class LoginController extends Controller {
 
     public Result loginForm() {
-        return ok(formLogin.render());
+        if(session("userId") != null ){
+            return redirect(routes.Application.index());
+        }
+        return ok(formLogin.render(null));
     }
 
     public Result login() {
+        if(session("userId") != null ){
+            return redirect(routes.Application.index());
+        }
         UserService userService = new UserService();
         Map<String, String[]> data = request().body().asFormUrlEncoded();
         String email = data.get("email")[0];
@@ -31,8 +35,7 @@ public class LoginController extends Controller {
             session("username", user.getFirstName() + " " + user.getLastName());
             return redirect(routes.Application.index());
         }
-
-        return redirect(routes.LoginController.loginForm());
+        return ok (formLogin.render("Wrong Email or Password!"));
     }
 
 }

@@ -40,6 +40,13 @@ GET         /dashboard/booklist                       controllers.BooksControlle
 
 #Rent Book
 GET         /rent/:bookId                             controllers.RentController.rentBook(bookId: Long)
+GET         /returnbook/:bookId                       controllers.RentController.returnBook(bookId: Long)
+
+#Penalty
+GET         /dashboard/notpayedpenalty                controllers.PenaltyController.notPayedPenalty()
+GET         /dashboard/payedpenalty                   controllers.PenaltyController.payedPenalty()
+GET         /dashboard/paypenalty/:penaltyId          controllers.PenaltyController.payPenaltyController(penaltyId: Long)
+
 #Dashboard
 GET         /dashboard/adminpanel                     controllers.DashboardController.adminPanel()
 

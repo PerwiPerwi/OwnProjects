@@ -1,4 +1,4 @@
-@(userForm: Form[User])
+@(userForm: Form[User])(message: String)
 @main("Signup") {
     <div class="container">
         <div class="row centered-form">
@@ -6,6 +6,9 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">Please sign up for Library!</h3>
+                        @if(message!= null){
+                            <h2 class="panel-title">@message</h2>
+                        }
                     </div>
                     <div class="panel-body">
                         <form action="/signup" method="POST">
@@ -34,7 +37,7 @@
                                 </div>
                                 <div class="col-xs-6 col-sm-6 col-md-6">
                                     <div class="form-group">
-                                        <input type="password" name="passwordConfirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+                                        <input type="password" name="confirmPassword" id="confirmPassword" class="form-control input-sm" placeholder="Confirm Password">
                                     </div>
                                 </div>
                             </div>

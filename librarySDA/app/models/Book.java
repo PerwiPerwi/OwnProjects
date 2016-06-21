@@ -23,7 +23,7 @@ public class Book extends Model {
     @Column(nullable = false, length = 800)
     private String description;
 
-   @OneToOne
+    @OneToMany(mappedBy = "book")
     private Rental rental;
 
     @Column(columnDefinition = "varchar default 'AVAILABLE'")

@@ -46,14 +46,13 @@ public class AdminPanelController extends Controller {
 
         User userFromForm = userForm.get();
         User user = userService.getByUserId(userFromForm.getId());
-        if(userService.getUserByEmail(userFromForm.getEmail()) == null && userFromForm.getEmail().equals(user.getEmail())){
-            userService.updateUserByAdmin(user, userFromForm);
-            return ok(editUserByAdmin.render(userForm, "User Profile has been updated!"));
+        if(userService.getUserByEmail(userFromForm.getEmail()) != null){
+            return ok(editUserByAdmin.render(userForm, "This Email is Already Registered"));
         }
-        return ok(editUserByAdmin.render(userForm, "This email is already registered!"));
+        userService.updateUserByAdmin(user, userFromForm);
+        return ok(editUserByAdmin.render(userForm, "User Profile has been updated!"));
 
     }
-
 
     public Result deleteUserByAdmin(long userId) {
         User user = userService.getByUserId(userId);

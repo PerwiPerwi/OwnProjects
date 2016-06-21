@@ -23,11 +23,12 @@ public class Rental extends Model {
     private DateTime returnDate = loanDate.plusDays(7);
 
     @Column(columnDefinition = "varchar default 'NOT_RETURNED'")
-    private String rentalStatus = "NOT";
+    private String rentalStatus = "NOT RETURNED";
+
     @OneToOne
     private Penalty penalty;
 
-    @OneToOne(optional = false)
+    @ManyToOne
     private Book book;
 
     @ManyToOne
